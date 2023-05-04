@@ -1,0 +1,71 @@
+@charset "ISO-8859-1";
+.body {
+  width: 620px;
+  margin: auto;
+  min-height: 100vh;
+}
+
+.body .body__title {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.body .body__title h1 {
+  color: var(--text-color-2);
+  font-size: 36px;
+}
+
+.body__content {
+  margin-bottom: 40px;
+}
+
+.body__content .content__detail {
+  font-size: 18px;
+  line-height: 1.6rem;
+  color: var(--text-color-3);
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.body__content .content__text {
+  color: var(--text-color-2);
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.body__content .content__detail a {
+  color: var(--text-color-4);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.body__content .content__space {
+  width: 24px;
+  height: 4px;
+  background-color: var(--space-color);
+  opacity: 0.6;
+  margin-top: 15px;
+  margin-bottom: 24px;
+}
+
+.content__list .content__list_details {
+  font-size: 16px;
+  line-height: 2.4rem;
+}
+
+.content__fourth .content__list .content__list_details {
+  font-size: 18px;
+}
+
+.content__fourth .content__list .content__list_details::before,
+.content__fifth .content__list .content__list_details::before {
+  content: "\2022";
+  color: red;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+}
+
+.content__fifth .content__list .content__list_details {
+  font-size: 18px;
+}

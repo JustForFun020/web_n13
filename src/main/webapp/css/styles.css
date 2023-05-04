@@ -1,1 +1,76 @@
 @charset "ISO-8859-1";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bgr-first: rgb(186, 73, 73);
+  --bgr-second: rgb(56, 133, 138);
+  --bgr-third: rgb(57, 112, 151);
+  --bgr-fifth: rgba(0, 0, 0, 0.4);
+  --bgr-color-sixth: rgb(239, 239, 239);
+  --bgr-btn: rgba(255, 255, 255, 0.2);
+  --bgr-active: rgba(0, 0, 0, 0.15);
+  --bgr-btn-2: rgba(255, 255, 255, 0.1);
+  --bgr-btn-3: rgba(0, 0, 0, 0.1);
+  --bgr-img-1: #999;
+  --text-color-first: rgb(186, 73, 73);
+  --text-color-2: hsl(357, 50%, 22%);
+  --text-color-3: hsl(357, 12%, 42%);
+  --text-color-4: hsl(2, 66%, 58%);
+  --text-color-5: hsl(357, 8%, 60%);
+  --text-color-6: rgb(102, 102, 102);
+  --text-color-7: rgb(85, 85, 85);
+  --text-color-8: rgb(187, 187, 187);
+  --space-color: #f05b56;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  margin: 0 !important;
+  padding-left: 0 !important;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.btn__custom {
+  color: white !important;
+  border: none !important;
+}
+
+.active {
+  font-weight: bold;
+  background-color: var(--bgr-active);
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.hide--overflow {
+  overflow: hidden;
+}
+
+.scroll--overflow {
+  overflow: scroll;
+}
+
+.main {
+  font-family: "Roboto", sans-serif;
+}

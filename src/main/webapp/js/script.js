@@ -1,6 +1,3 @@
-/**
- * 
- */
 // Xử lý đếm ngược khi click button START
 let countdownInterval;
 let isCountdownRunning = false;
@@ -32,7 +29,7 @@ function handleCountDownTime() {
   }
 }
 let countClickStart = 0;
-const btnStart = document.querySelector('.start__time');
+const btnStart = document.querySelector('.batdau__thoigian');
 btnStart.addEventListener('click', () => {
   setTimeout(() => {
     countClickStart++;
@@ -57,9 +54,9 @@ input2.addEventListener('input', (event) => {
 });
 // END Task
 
-const btnToggle = document.querySelectorAll('.btn-toggle');
-const circleWrapper = document.querySelectorAll('.circle-wrapper');
-const circle = document.querySelectorAll('.circle');
+const btnToggle = document.querySelectorAll('.nut-chuyendoi');
+const circleWrapper = document.querySelectorAll('.vongtron-baoboc');
+const circle = document.querySelectorAll('.vongtron');
 let clickCount = 0;
 btnToggle.forEach((item, index1) => {
   item.addEventListener('click', () => {
@@ -70,7 +67,7 @@ btnToggle.forEach((item, index1) => {
     });
     circleWrapper.forEach((item, index3) => {
       if (index1 === index3) {
-        item.classList.toggle('circle-wrapper--active');
+        item.classList.toggle('vongtron-baoboc--active');
       }
     });
   });
@@ -78,12 +75,12 @@ btnToggle.forEach((item, index1) => {
 //END Task
 
 // Xử lý hiện và ẩn tab setting
-const btnSetting = document.querySelector('.btn--setting');
-const btnCloseSetting = document.querySelector('.btn--close--setting');
-const settingContainer = document.querySelector('.header__setting');
-const bodyContainer = document.querySelector('.body');
-const footerContainer = document.querySelector('.footer');
-const wrapper = document.querySelector('.wrapper__app');
+const btnSetting = document.querySelector('.nut--caidat');
+const btnCloseSetting = document.querySelector('.nut--dong--caidat');
+const settingContainer = document.querySelector('.phandau__caidat');
+const bodyContainer = document.querySelector('.phanthan');
+const footerContainer = document.querySelector('.phancuoi');
+const wrapper = document.querySelector('.baoboc__ungdung');
 
 btnSetting.addEventListener('click', () => {
   settingContainer.classList.add('show');
@@ -104,10 +101,10 @@ btnCloseSetting.addEventListener('click', () => {
 
 // Active kiểu thời gian(Pomodoro, Long Break, Short Break)
 let timeIndex = 0;
-const timePomodoro = document.querySelector('.time_pomodo');
-const timeShortBreak = document.querySelector('.time_short--break');
-const timeLongBreak = document.querySelector('.time_long--break');
-const listTypeOfTime = document.querySelectorAll('.setup-type-time');
+const timePomodoro = document.querySelector('.thoigian_pomodo');
+const timeShortBreak = document.querySelector('.thoigian-nghi-ngan');
+const timeLongBreak = document.querySelector('.thoigian-nghi-dai');
+const listTypeOfTime = document.querySelectorAll('.caidat-kieu-thoigian');
 // background color: đỏ:(186, 73, 73) xanh lá:(56, 133, 138) xánh dương:(57, 112, 151)
 listTypeOfTime.forEach((item, index) =>
   item.addEventListener('click', () => {
@@ -129,6 +126,6 @@ listTypeOfTime.forEach((item, index) =>
       timeLongBreak.classList.add('active');
       timeShortBreak.classList.remove('active');
     }
-  }),
+  })
 );
 // END Task

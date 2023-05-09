@@ -1,5 +1,5 @@
 @charset "ISO-8859-1";
-.header {
+.phandau {
   min-height: 100vh;
   background-color: rgb(186, 73, 73);
   color: white;
@@ -7,7 +7,7 @@
   position: relative;
 }
 
-.hearder__first {
+.phandau__thunhat {
   height: 60px;
   width: 620px;
   display: flex;
@@ -17,28 +17,28 @@
   border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
 }
 
-.header__first__logo {
+.phandau__thunhat__logo {
   display: flex;
 }
 
-.header__pomofocus--text h3 {
+.phandau__pomofocus--chu h3 {
   font-weight: 500;
   font-size: 20px;
   transform: translateY(-3px);
 }
 
-.header__pomofocus--icon {
+.phandau__pomofocus--icon {
   width: 20px;
   height: 20px;
   margin-right: 4px;
 }
 
-.header__navbar__list {
+.phandau__thanhdieuhuong__danhsach {
   display: flex;
 }
 
-.header__navbar__list .navbar__list--btn button,
-.btn__custom {
+.phandau__thanhdieuhuong__danhsach .thanhdieuhuong__danhsach--nut button,
+.nut__tuchon {
   padding: 8px 12px;
   opacity: 0.9;
   font-size: 13px;
@@ -53,53 +53,53 @@
   align-items: center;
 }
 
-.header__navbar__list .navbar__list--btn button:hover,
-.btn__custom:hover {
+.phandau__thanhdieuhuong__danhsach .thanhdieuhuong__danhsach--nut button:hover,
+.nut__tuchon:hover {
   cursor: pointer;
 }
 
-.header__navbar__list .navbar__list--btn button img {
+.phandau__thanhdieuhuong__danhsach .thanhdieuhuong__danhsach--nut button img {
   width: 16px;
   height: 16px;
 }
 
-.header__navbar__list .navbar__list--btn button span {
+.phandau__thanhdieuhuong__danhsach .thanhdieuhuong__danhsach--nut button span {
   opacity: 0.8;
   font-size: 13px;
 }
 
-.header__navbar__list .navbar__list--btn button:hover span {
+.phandau__thanhdieuhuong__danhsach .thanhdieuhuong__danhsach--nut button:hover span {
   opacity: 1;
   animation: hoverAnimation 0.2s ease;
   cursor: pointer;
 }
 
-.header__navbar__list .navbar__list--btn .btn--text {
+.phandau__thanhdieuhuong__danhsach .thanhdieuhuong__danhsach--nut .nut--chu {
   margin-left: 3px;
   opacity: 0.8;
 }
 
 /* Header Second */
 
-.hearder__second {
+.phandau__thuhai {
   max-width: 620px;
   height: 420px;
   margin: auto;
   margin-top: 40px;
 }
 
-.header__second__time {
+.phandau__thuhai__thoigian {
   text-align: center;
   margin-top: 20px;
   cursor: default;
 }
 
-.header__second__time h1 {
+.phandau__thuhai__thoigian h1 {
   font-size: 120px;
   margin: 0;
 }
 
-.header__second__time_focus {
+.phandau__thuhai__thoigian__taptrung {
   width: 480px;
   height: 330px;
   background-color: var(--bgr-btn-2);
@@ -108,18 +108,18 @@
   padding: 20px 0px 30px;
 }
 
-.header__second__navbar .list__time__work {
+.phandau__thuhai__thanhdieuhuong .danhsach__thoigian__lamviec {
   display: flex;
   justify-content: center;
 }
 
-.header__second__navbar .list__time__work li {
+.phandau__thuhai__thanhdieuhuong .danhsach__thoigian__lamviec li {
   width: 125px;
   height: 28px;
   border-radius: 4px;
 }
 
-.list__time__work li button {
+.danhsach__thoigian__lamviec li button {
   font-size: 16px;
   background-color: unset;
   height: 100%;
@@ -127,11 +127,11 @@
   padding: 0 16px 0 16px;
 }
 
-.header__second__btn {
+.phandau__thuhai__nut {
   text-align: center;
 }
 
-.header__second__btn button {
+.phandau__thuhai__nut button {
   cursor: pointer;
   border: none;
   margin: 20px 0px 0px;
@@ -148,20 +148,20 @@
   transition: color 0.5s ease-in-out 0s;
 }
 
-.header__second__list_task {
+.phandau__thuhai__danhsach_nhiemvu {
   margin-top: 20px;
   text-align: center;
 }
 
 /* Header Third */
 
-.hearder__third {
+.phandau__thuba {
   text-align: center;
   width: 480px;
   margin: auto;
 }
 
-.hearder__third .create__task {
+.phandau__thuba .tao__nhiemvu {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -169,7 +169,7 @@
   padding-bottom: 14px;
 }
 
-.hearder__third .create__task button {
+.phandau__thuba .tao__nhiemvu button {
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -184,18 +184,18 @@
   border: none;
 }
 
-.hearder__third .create__task img {
+.phandau__thuba .tao__nhiemvu img {
   height: 16px;
   width: 16px;
 }
 
-.hearder__third .add__task {
+.phandau__thuba .them__nhiemvu {
   margin-top: 18px;
   border: 2px dashed rgba(255, 255, 255, 0.4);
   border-radius: 8px;
 }
 
-.hearder__third .add__task button {
+.phandau__thuba .them__nhiemvu button {
   height: 64px;
   width: 100%;
   justify-content: center;
@@ -206,7 +206,7 @@
   margin: 0;
 }
 
-.header__setting {
+.phandau__caidat {
   background-color: var(--bgr-fifth);
   width: 100%;
   height: 100vh;
@@ -217,7 +217,7 @@
   padding-bottom: 50px;
 }
 
-.setting {
+.caidat {
   color: rgb(34, 34, 34);
   border-radius: 8px;
   background-color: white;
@@ -233,9 +233,8 @@
   box-shadow: rgb(0 0 0 / 15%) 0px 10px 20px, rgb(0 0 0 / 10%) 0px 3px 6px;
 }
 
-.setting__title {
+.caidat__tieude {
   font-weight: bold;
-  border-bottom: 1px solid rgb(238, 238, 238);
   text-align: left;
   text-transform: capitalize;
   letter-spacing: 0px;
@@ -244,7 +243,7 @@
   color: var(--text-color-6);
 }
 
-.setting .btn--close--setting {
+.caidat .nut--dong--caidat {
   width: 26px;
   height: 26px;
   margin-right: 14px;
@@ -253,11 +252,11 @@
   cursor: pointer;
 }
 
-.setting__config {
+.caidat__cauhinh {
   padding: 0 20px;
 }
 
-.setting__config_timer .timer--title {
+.caidat__cauhinh_thoigian .thoigian--tieude {
   font-size: 14px;
   color: rgb(187, 187, 187);
   font-weight: bold;
@@ -270,33 +269,33 @@
   align-items: center;
 }
 
-.setting__config_timer .timer--title img {
+.caidat__cauhinh_thoigian .thoigian--tieude img {
   width: 16px;
   opacity: 0.3;
   margin-right: 6px;
 }
 
-.setting__config_timer .timer--config {
+.caidat__cauhinh_thoigian .thoigian--cauhinh {
   padding-bottom: 12px;
   margin-bottom: 12px;
 }
 
-.timer--config .set--time {
+.thoigian--cauhinh .thietlap--thoigian {
   display: flex;
   overflow: hidden;
   justify-content: space-between;
   margin-top: 10px !important;
 }
 
-.timer--config .set--time li {
+.thoigian--cauhinh .thietlap--thoigian li {
   width: 98px;
 }
 
-.timer--config-first {
+.thoigian--cauhinh-thunhat {
   padding: 12px 0;
 }
 
-.timer--config .set--time label {
+.thoigian--cauhinh .thietlap--thoigian label {
   display: block;
   font-size: 14px;
   color: var(--text-color-8);
@@ -304,7 +303,7 @@
   margin-bottom: 4px;
 }
 
-.timer--config .set--time input {
+.thoigian--cauhinh .thietlap--thoigian input {
   border-radius: 4px;
   background-color: var(--bgr-color-sixth);
   font-size: 16px;
@@ -314,45 +313,46 @@
   color: var(--text-color-7);
   width: 100%;
   box-sizing: border-box;
+  outline: none;
 }
 
-.text {
+.chu {
   color: var(--text-color-7);
   font-weight: bold;
   display: flex;
   align-items: center;
 }
 
-.timer--config-second li {
+.thoigian--cauhinh-thuhai li {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 0;
 }
 
-.timer--config-second li span,
-.timer--config-third li span,
-.list__theme_setting li span {
+.thoigian--cauhinh-thuhai li span,
+.thoigian--cauhinh-thuba li span,
+.danhsach__chude_caidat li span {
   color: var(--text-color-7);
   font-weight: bold;
 }
 
-.timer--config-third li {
+.thoigian--cauhinh-thuba li {
   padding: 12px 0;
 }
 
-.timer--config-third li:nth-child(1) {
+.thoigian--cauhinh-thuba li:nth-child(1) {
   margin-top: 14px;
 }
 
-.timer--config-second .btn-toggle,
-.dark-mode .btn-toggle {
+.thoigian--cauhinh-thuhai .nut-chuyendoi,
+.mautoi .nut-chuyendoi {
   width: 60px;
   height: 32px;
 }
 
-.timer--config-second .btn-toggle .circle-wrapper,
-.dark-mode .btn-toggle .circle-wrapper {
+.thoigian--cauhinh-thuhai .nut-chuyendoi .vongtron-baoboc,
+.mautoi .nut-chuyendoi .vongtron-baoboc {
   width: 100%;
   height: 100%;
   border: 1px black solid;
@@ -367,12 +367,12 @@
   left: 30px !important;
 }
 
-.circle-wrapper--active {
+.vongtron-baoboc--active {
   background-color: rgba(132, 199, 51, 0.8) !important;
 }
 
-.timer--config-second .btn-toggle .circle-wrapper .circle,
-.dark-mode .btn-toggle .circle-wrapper .circle {
+.thoigian--cauhinh-thuhai .nut-chuyendoi .vongtron-baoboc .vongtron,
+.mautoi .nut-chuyendoi .vongtron-baoboc .vongtron {
   position: absolute;
   left: 2px;
   top: 1px;
@@ -383,23 +383,23 @@
   box-shadow: rgb(0 0 0 / 30%) 0px 1px 1px;
 }
 
-.space {
+.khoangcach {
   height: 1px;
   width: 100%;
   background-color: rgb(223, 223, 223);
 }
 
-.timer--config-third li {
+.thoigian--cauhinh-thuba li {
   display: flex;
   justify-content: space-between;
 }
 
-.timer--config-third li select,
+.thoigian--cauhinh-thuba li select,
 #config--sound,
-.select--hour,
-.chose-noti input,
-.chose-noti select,
-.setting-connect {
+.chon--gio,
+.chon-thongbao input,
+.chon-thongbao select,
+.caidat-ketnoi {
   cursor: pointer;
   position: relative;
   width: 100%;
@@ -415,45 +415,45 @@
   border: none;
 }
 
-.chose-noti input,
-.chose-noti select {
+.chon-thongbao input,
+.chon-thongbao select {
   width: 80px;
 }
 
-.setting__details_theme .chose-color {
+.caidat__chitiet_chude .chon-mausac {
   cursor: pointer;
   width: 1.7rem;
   height: 1.7rem;
   border-radius: 0.4rem;
 }
 
-.list__theme_setting li {
+.danhsach__chude_caidat li {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 25px 0;
 }
 
-.list-change-color {
+.danhsach-thaydoi-mausac {
   width: 110px;
   display: flex;
   justify-content: space-between;
 }
 
-.list_other_setting li {
+.danhsach_khac_caidat li {
   display: flex;
   justify-content: space-between;
   margin: 25px 0;
 }
 
-.integration {
+.lienhop {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 25px 0;
 }
 
-.setting__footer {
+.caidat__phancuoi {
   padding: 14px 20px;
   text-align: right;
   border-bottom-left-radius: 8px;
@@ -461,7 +461,7 @@
   background-color: rgb(239, 239, 239);
 }
 
-.setting__footer button {
+.caidat__phancuoi button {
   border-radius: 4px;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
@@ -482,3 +482,4 @@
     opacity: 1;
   }
 }
+

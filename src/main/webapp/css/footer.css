@@ -1,5 +1,5 @@
 @charset "ISO-8859-1";
-.footer {
+.phancuoi {
   margin-top: 40px;
   border-top: 2px solid #efefef !important;
   text-align: center;
@@ -10,27 +10,27 @@
   height: 200px;
 }
 
-.footer__navbar {
+.phancuoi__thanhdieuhuong {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.footer__navbar li {
+.phancuoi__thanhdieuhuong li {
   margin: 0 10px;
 }
 
-.footer__navbar li a {
+.phancuoi__thanhdieuhuong li a {
   color: var(--text-color-3);
   font-size: 14px;
   font-weight: bold;
 }
 
-.footer__snslink {
+.phancuoi__lienket_sns {
   margin-bottom: 18px;
 }
 
-.footer__snslink img {
+.phancuoi__lienket_sns img {
   width: 40px;
   height: 40px;
   background-color: var(--bgr-img-1);
@@ -40,12 +40,12 @@
   cursor: pointer;
 }
 
-.footer__content {
+.phancuoi__noidung {
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
-.footer__about {
+.phancuoi__khac {
   color: var(--text-color-5);
   font-size: 12px;
 }

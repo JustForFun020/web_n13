@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <body>
@@ -29,7 +29,7 @@
           Made by
           <strong style="color: var(--text-color-4); opacity: 0.7">N13_WEB</strong>
         </div>
-        <div class="phancuoi__khac">©Pomofocus 2023. All Rights Reserved.</div>
+        <div class="phancuoi__khac">Â©Pomofocus 2023. All Rights Reserved.</div>
       </footer>
 </body>
 </html>

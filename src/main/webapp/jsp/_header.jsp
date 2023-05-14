@@ -33,12 +33,14 @@
                 </button>
               </li>
               <li class="thanhdieuhuong__danhsach--nut">
-                <button class="nut--dangnhap" id="login" onclick="handleClickLogin()">
-                  <span>
-                    <img src="../images/user-icon.png" alt="setting-icon" />
-                  </span>
-                  <span class="nut--chu">Login</span>
-                </button>
+              	<form action="${pageContext.request.contextPath}/jsp/login.jsp">
+                	<button class="nut--dangnhap" id="login">
+                  	<span>
+                    	<img src="../images/user-icon.png" alt="setting-icon" />
+                  	</span>
+                  	<span class="nut--chu">Login</span>
+                	</button>
+              	</form>
               </li>
             </ul>
           </div>

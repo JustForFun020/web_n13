@@ -27,6 +27,7 @@ public class UserDAO {
 			while(rs.next()) {
 				listUser.add(new UserAccounts(
 						// Lấy dữ liệu từ các cột 1, 3, 4, 5
+						rs.getInt(1),
 						rs.getString(3), 
 						rs.getString(4), 
 						rs.getString(5)));
@@ -40,6 +41,7 @@ public class UserDAO {
 	
 	public UserAccounts findUser(String username, String password) {
 		String query = "SELECT * FROM [WEB].[dbo].[nguoiDung] WHERE userName = ? AND password = ?";
+		UserAccounts account = null;
 		try {
 			c = new JDBCUnit().getConnection();
 			ps = c.prepareStatement(query);
@@ -47,10 +49,11 @@ public class UserDAO {
 			ps.setString(2, password);
 			rs = ps.executeQuery();
 			if(rs.next()) {
-				String account = rs.getString("userName"); 
+				int id = rs.getInt("ID");
+				String userName = rs.getString("userName"); 
 	            String pass = rs.getString("password"); 
 	            String role = rs.getString("role"); 
-	            UserAccounts user = new UserAccounts(account , pass, role);
+	            UserAccounts user = new UserAccounts(id, userName , pass, role);
 	            return user;
 			}
 			else {
@@ -59,7 +62,7 @@ public class UserDAO {
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println(e);
-		}
-		return null;
+			}
+		return account;
 	}
 }

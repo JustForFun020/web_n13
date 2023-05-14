@@ -36,8 +36,7 @@ public class LoginController extends HttpServlet {
 		}
 		else {
 			req.setAttribute("errLogin", "Tài khoản hoặc mật khẩu không đúng!");
-	        RequestDispatcher dispatcher = req.getRequestDispatcher(req.getContextPath() + "/login.jsp");
-	        dispatcher.forward(req, resp);
+			resp.sendRedirect(req.getContextPath() + "/jsp/login.jsp");
 		}
 	}
 }

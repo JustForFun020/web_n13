@@ -19,7 +19,7 @@ function handleCountDownTime() {
       }
       if (minutes < 0) {
         clearInterval(countdownInterval);
-        alert('Countdown finished!');
+        alert('Hết thời gian!');
       } else {
         document.getElementById('time__focus').innerHTML =
           minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');
@@ -31,10 +31,8 @@ function handleCountDownTime() {
 let countClickStart = 0;
 const btnStart = document.querySelector('.batdau__thoigian');
 btnStart.addEventListener('click', () => {
-  setTimeout(() => {
     countClickStart++;
     btnStart.textContent = countClickStart % 2 === 0 ? 'START' : 'PAUSE';
-  }, 1000);
 });
 // END Task
 

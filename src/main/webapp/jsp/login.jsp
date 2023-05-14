@@ -28,23 +28,23 @@
 			<h3>Đăng nhập</h3>
 		</div>
 		<div class="dangnhap__form">
-      		<form action="" class="form">
+      		<form action="${pageContext.request.contextPath}/login" id="form__dangnhap" method="POST" class="form">
         		<div class="form__chu">
           			<h1 style="color: rgb(196, 196, 196)">Đăng Nhập</h1>
         		</div>
         		<div style="display: flex; flex-direction: column">
           			<div style="display: flex; flex-direction: column; margin: 15px 0">
             			<label for="taikhoan">Tài Khoản</label>
-            			<input type="text" id="taikhoan" />
+            			<input type="text" id="taikhoan" name="taikhoan"/>
           			</div>
           			<div style="display: flex; flex-direction: column; margin-bottom: 20px">
             			<label for="matkhau">Mật Khẩu</label>
-            			<input type="text" id="matkhau" />
+            			<input type="password" id="matkhau" name="matkhau"/>
           			</div>
-          		<button class="nut__dangnhap">Đăng Nhập</button>
-          		<button class="nut__quenmatkhau">Quên Mật Khẩu</button>
+          			<button class="nut__dangnhap">Đăng Nhập</button>
         		</div>
       		</form>
+          			<button class="nut__quenmatkhau">Quên Mật Khẩu</button>
     	</div>
 		<div class="dangnhap__cauhoi">
 			<span>Bạn chưa có tài khoản?</span>

@@ -32,7 +32,7 @@ public class LoginController extends HttpServlet {
 		UserDAO userDAO = new UserDAO();
 		UserAccounts user = userDAO.findUser(account, password);
 		if(user != null) {
-			resp.sendRedirect(req.getContextPath() + "/jsp/index.jsp");
+			resp.sendRedirect(req.getContextPath() + "/jsp/user/index.jsp");
 		}
 		else {
 			req.setAttribute("errLogin", "Tài khoản hoặc mật khẩu không đúng!");

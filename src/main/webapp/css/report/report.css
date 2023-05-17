@@ -1,0 +1,74 @@
+.phandau__baocao {
+    background-color: var(--bgr-fifth);
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.baocao {
+    color: rgb(34, 34, 34);
+    border-radius: 8px;
+    background-color: white;
+    position: relative;
+    max-width: 600px;
+    min-height: 60vh;
+    z-index: 2147483647;
+    border-top: 1px solid rgb(239, 239, 239);
+    border-bottom: 1px solid rgb(239, 239, 239);
+    margin: auto;
+    transition: all 0.2s ease-in 0s;
+    transform: translateY(20px);
+    box-shadow: rgb(0 0 0 / 15%) 0px 10px 20px, rgb(0 0 0 / 10%) 0px 3px 6px;
+    padding: 20px;
+}
+
+.nut--dong--baocao {
+    width: 26px;
+    height: 26px;
+    margin-right: 14px;
+    opacity: 0.3;
+    padding: 6px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+.baocao__danhsach {
+    border: 2px solid rgb(225, 155, 153);
+    border-radius: 8px;
+    display: flex;
+    width: 90%;
+    margin: 30px 0 30px 30px !important;
+}
+
+.baocao__danhsach .li--visited {
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+    padding: 8px 0px;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: rgb(225, 155, 153);
+    color: white;
+    border-right: 2px solid rgb(225, 155, 153);
+}
+
+.baocao__danhsach li {
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+    color: rgb(225, 155, 153);
+    padding: 8px 0px;
+    font-weight: bold;
+    font-size: 16px;
+    border-right: 2px solid rgb(225, 155, 153);
+}
+
+.baocao__danhsach .baocao__danhsach--nut:nth-child(3) {
+    border-right: 0 solid rgb(225, 155, 153);
+}

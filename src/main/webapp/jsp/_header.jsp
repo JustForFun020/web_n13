@@ -104,6 +104,8 @@
         </div>
         <!-- Header Setting -->
         <jsp:include page="_setting.jsp"></jsp:include>
+        <!-- Header Report -->
+        <jsp:include page="../jsp/report/index.jsp"></jsp:include>
       </header>
 </body>
 </html>

@@ -97,6 +97,28 @@ btnCloseSetting.addEventListener('click', () => {
 });
 // END Task
 
+// Xử lý hiện và ẩn tab report
+const btnReport = document.querySelector('.nut--baocao');
+const btnReportSetting = document.querySelector('.nut--dong--baocao');
+const reportContainer = document.querySelector('.phandau__baocao');
+
+btnReport.addEventListener('click', () => {
+  reportContainer.classList.add('show');
+  reportContainer.classList.add('scroll--overflow');
+  bodyContainer.classList.add('hide');
+  footerContainer.classList.add('hide');
+  wrapper.classList.add('hide--overflow');
+});
+btnReportSetting.addEventListener('click', () => {
+  reportContainer.classList.remove('show');
+  reportContainer.classList.remove('scroll--overflow');
+  reportContainer.classList.add('hide');
+  bodyContainer.classList.remove('hide');
+  footerContainer.classList.remove('hide');
+  wrapper.classList.remove('hide--overflow');
+});
+// END Task
+
 // Active kiểu thời gian(Pomodoro, Long Break, Short Break)
 let timeIndex = 0;
 const timePomodoro = document.querySelector('.thoigian_pomodo');

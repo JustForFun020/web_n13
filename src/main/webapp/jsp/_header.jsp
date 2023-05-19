@@ -95,11 +95,24 @@
               <img src="../images/threedots-icon.png" alt="" />
             </button>
           </div>
-          <div class="them__nhiemvu">
-            <button class="nut__tuchon">
-              <img src="../images/plus-circle-icon.png" alt="" style="width: 18px; opacity: 0.8; margin-right: 8px" />
-              Add Task
-            </button>
+          <div class="them__todolist">
+            <div class="them__nhiemvu">
+              <button class="nut__tuchon">
+                <img src="../images/plus-circle-icon.png" alt="" style="width: 18px; opacity: 0.8; margin-right: 8px" />
+                Add Task
+              </button>
+            </div>
+            <div class="them__nhiemvu__chitiet hide">
+              <div class="khung__them__nhiemvu">
+                <input type="text" placeholder="What are you working on?" />
+                <button class="nut--them__ghichu">Add Note +</button>
+                <textarea name="" class="hide" id="o--them__ghichu" rows="3" placeholder="Add Note"></textarea>
+              </div>
+              <div class="them__nhiemvu__navbar">
+                <button class="nut--them__nhiemvu" style="margin-left: 20px">Save</button>
+                <button class="nut--huy--them__nhiemvu">Cancel</button>
+              </div>
+            </div>
           </div>
         </div>
         <!-- Header Setting -->

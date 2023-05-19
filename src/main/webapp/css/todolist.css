@@ -1,0 +1,83 @@
+.them__nhiemvu__chitiet {
+    height: 300px;
+    padding: 20px 0 ;
+}
+
+.khung__them__nhiemvu {
+    min-height: 60%;
+    background-color: white;
+    padding: 12px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.khung__them__nhiemvu input {
+    width: 100%;
+    color: #E4DCCF;
+    border: none;
+    font-size: 22px;
+    outline: none;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.khung__them__nhiemvu input::placeholder {
+    color: #E9EDC9;
+}
+
+.khung__them__nhiemvu #o--them__ghichu {
+    padding: 12px;
+    width: 100%;
+    resize: unset;
+    letter-spacing: 0.4px;
+    line-height: 1.5;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--bgr-color-sixth);
+}
+
+.khung__them__nhiemvu .nut--them__ghichu {
+    font-size: 14px;
+    background: none;
+    border: none;
+    float: left;
+    margin-top: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0, 0.4);
+    text-decoration: underline;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.them__nhiemvu__navbar {
+    padding: 8px 20px;
+    height: 20%;
+    background-color: #F0EDD4;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.them__nhiemvu__navbar button {
+    cursor: pointer;
+    width: 80px;
+    height: 35px;
+    float: right;
+}
+
+.nut--them__nhiemvu {
+    font-size: 14px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
+    border: 2px solid rgb(34, 34, 34);
+    opacity: 0.7;
+    color: #fff;
+    background-color: rgb(34, 34, 34);
+}
+
+.nut--huy--them__nhiemvu {
+    border: none;
+    color: rgb(136, 136, 136);
+    background: none;
+    font-weight: bold;
+    font-size: 14px;
+}

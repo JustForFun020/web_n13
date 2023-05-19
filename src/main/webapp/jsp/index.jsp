@@ -21,10 +21,12 @@
     <link rel="stylesheet" href="../css/headerStyle.css" />
     <link rel="stylesheet" href="../css/bodyStyle.css" />
     <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/todolist.css" />
     <!-- Report CSS -->
     <link rel="stylesheet" href="../css/report/report.css" />
     <link rel="stylesheet" href="../css/report/summary.css" />
     <link rel="stylesheet" href="../css/report/ranking.css" />
+  
 </head>
 <body class="baoboc__ungdung">
     <!-- Main -->
@@ -39,5 +41,6 @@
     <!-- JavaScript -->
     <script src="../js/script.js"></script>
     <script src="../js/report.js"></script>
+    <script src="../js/todolist.js"></script>
   </body>
 </html>

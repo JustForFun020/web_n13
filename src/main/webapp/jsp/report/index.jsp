@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<html>
-<body>
-	<main class="phandau__baocao">
+
+	<main class="phandau__baocao hide">
 		<div class="baocao">
             <img src="../images/close-icon.png" alt="" class="nut--dong--baocao" />
             <ul class="baocao__danhsach">
@@ -14,5 +12,3 @@
             <jsp:include page="ranking.jsp"></jsp:include>
           </div>
         </main>
-</body>
-</html>

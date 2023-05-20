@@ -1,4 +1,5 @@
 // Xử lý đếm ngược khi click button START
+
 let countdownInterval;
 let isCountdownRunning = false;
 function handleCountDownTime() {
@@ -97,51 +98,49 @@ btnCloseSetting.addEventListener('click', () => {
 });
 // END Task
 
-// Xử lý hiện và ẩn tab report
-const btnReport = document.querySelector('.nut--baocao');
-const btnReportSetting = document.querySelector('.nut--dong--baocao');
-const reportContainer = document.querySelector('.phandau__baocao');
-
-btnReport.addEventListener('click', () => {
-  reportContainer.classList.add('show');
-  reportContainer.classList.add('scroll--overflow');
-  bodyContainer.classList.add('hide');
-  footerContainer.classList.add('hide');
-  wrapper.classList.add('hide--overflow');
-});
-btnReportSetting.addEventListener('click', () => {
-  reportContainer.classList.remove('show');
-  reportContainer.classList.remove('scroll--overflow');
-  reportContainer.classList.add('hide');
-  bodyContainer.classList.remove('hide');
-  footerContainer.classList.remove('hide');
-  wrapper.classList.remove('hide--overflow');
-});
-// END Task
-
 // Active kiểu thời gian(Pomodoro, Long Break, Short Break)
 let timeIndex = 0;
 const timePomodoro = document.querySelector('.thoigian_pomodo');
 const timeShortBreak = document.querySelector('.thoigian-nghi-ngan');
 const timeLongBreak = document.querySelector('.thoigian-nghi-dai');
 const listTypeOfTime = document.querySelectorAll('.caidat-kieu-thoigian');
-// background color: đỏ:(186, 73, 73) xanh lá:(56, 133, 138) xánh dương:(57, 112, 151)
+const phandau = document.querySelector('.phandau');
+const thoigian = document.querySelector('.phandau__thuhai__thoigian--chu');
+const noidung_thoigian = document.querySelector('.phandau__thuhai__chu p');
+const nut_start = document.querySelector('.phandau__thuhai__nut button');
 listTypeOfTime.forEach((item, index) =>
   item.addEventListener('click', () => {
-    // item.style.backgroundColor = 'red';
     listTypeOfTime.forEach((otherItem) => {
       otherItem.classList.remove('active');
     });
     item.classList.add('active');
-    if (index === 0) {
+    if (index === 0 ) {
+		phandau.classList.add('phandau');			
+		phandau.classList.remove('phandau-shortbreak');	
+		phandau.classList.remove('phandau-longbreak');	
       timePomodoro.classList.add('active');
       timeLongBreak.classList.remove('active');
+      thoigian.innerHTML = "25:00";
+      nut_start.style.color = "rgb(186, 73, 73)";
+      noidung_thoigian.innerHTML = "Time to focus!"
       timeShortBreak.classList.remove('active');
     } else if (index === 1) {
+	  phandau.classList.add('phandau-shortbreak');
+	  	phandau.classList.remove('phandau');			
+		phandau.classList.remove('phandau-longbreak');	
+		thoigian.innerHTML = "05:00";
+		nut_start.style.color = "rgb(56, 133, 138)";
+		noidung_thoigian.innerHTML = "Time for a break!"
       timePomodoro.classList.remove('active');
       timeLongBreak.classList.remove('active');
       timeShortBreak.classList.add('active');
     } else {
+		phandau.classList.remove('phandau');			
+		phandau.classList.remove('phandau-shortbreak');	
+		phandau.classList.add('phandau-longbreak');
+		thoigian.innerHTML = "15:00";
+		nut_start.style.color = "rgb(57, 112, 151)";
+		noidung_thoigian.innerHTML = "Time for a break!"
       timePomodoro.classList.remove('active');
       timeLongBreak.classList.add('active');
       timeShortBreak.classList.remove('active');
@@ -149,4 +148,3 @@ listTypeOfTime.forEach((item, index) =>
   })
 );
 // END Task
-

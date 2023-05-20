@@ -5,6 +5,7 @@
   color: white;
   transition: var(--bgr-first) 1s ease;
   position: relative;
+  transition: background-color 0.5s ease-in-out 0s;
 }
 
 .phandau__thunhat {
@@ -206,7 +207,7 @@
   margin: 0;
 }
 
-.phandau__caidat, .phandau__baocao {
+.phandau__caidat {
   background-color: var(--bgr-fifth);
   width: 100%;
   height: 100vh;
@@ -217,7 +218,7 @@
   padding-bottom: 50px;
 }
 
-.caidat, .baocao {
+.caidat {
   color: rgb(34, 34, 34);
   border-radius: 8px;
   background-color: white;
@@ -482,4 +483,21 @@
     opacity: 1;
   }
 }
+
+.phandau-shortbreak{
+  min-height: 100vh;
+  background-color: rgb(56, 133, 138);
+  color: white;
+  transition: var(--bgr-second) 1s ease;
+  transition: background-color 0.5s ease-in-out 0s;
+}
+.phandau-longbreak{
+  min-height: 100vh;
+  background-color: rgb(57, 112, 151);
+  color: white;
+  transition: var(--bgr-third) 1s ease;
+  transition: background-color 0.5s ease-in-out 0s;
+}
+
+
 

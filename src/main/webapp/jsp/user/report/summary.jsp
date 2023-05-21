@@ -6,8 +6,6 @@
 			<p>Activity Summary</p>
 			<div></div>
 		</div>
-		<p class="canhbao__dangnhap">* Vui lòng đăng nhập để sử dụng tính
-			năng này</p>
 		<form action="" class="tonghop__hoatdong--form">
 			<div class="sogio__taptrung--form">
 				<div>

@@ -1,7 +1,7 @@
 .phandau__baocao {
     background-color: var(--bgr-fifth);
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     position: absolute;
     top: 0;
     overflow-x: hidden;
@@ -15,7 +15,7 @@
     background-color: white;
     position: relative;
     max-width: 600px;
-    min-height: 60vh;
+    min-height: 30vh;
     z-index: 2147483647;
     border-top: 1px solid rgb(239, 239, 239);
     border-bottom: 1px solid rgb(239, 239, 239);
@@ -39,7 +39,7 @@
 }
 
 .baocao__danhsach {
-    border: 2px solid rgb(225, 155, 153);
+    border: 2px solid var(--border-color);
     border-radius: 8px;
     display: flex;
     width: 90%;
@@ -53,22 +53,128 @@
     padding: 8px 0px;
     font-weight: bold;
     font-size: 16px;
-    background-color: rgb(225, 155, 153);
+    background-color: var(--border-color);
     color: white;
-    border-right: 2px solid rgb(225, 155, 153);
+    border-right: 2px solid var(--border-color);
 }
 
 .baocao__danhsach li {
     cursor: pointer;
     width: 50%;
     text-align: center;
-    color: rgb(225, 155, 153);
+    color: var(--border-color);
     padding: 8px 0px;
     font-weight: bold;
     font-size: 16px;
-    border-right: 2px solid rgb(225, 155, 153);
+    border-right: 2px solid var(--border-color);
 }
 
 .baocao__danhsach .baocao__danhsach--nut:nth-child(3) {
-    border-right: 0 solid rgb(225, 155, 153);
+    border-right: 0 solid var(--border-color);
+}
+
+.tonghop__hoatdong--form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sogio__taptrung--form, .dangnhap__lientiep--form {
+    border-radius: 20px;
+    padding: 18px;
+    min-width: 120px;
+    background-color: var(--border-color);
+}
+
+.sogio__taptrung--form p, .dangnhap__lientiep--form p {
+    color: #FFD3B0;
+    font-weight: bold;
+}
+
+.sogio__taptrung--form img, .dangnhap__lientiep--form img {
+    width: 28px;
+}
+
+.sogio__taptrung--form div, .dangnhap__lientiep--form div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.sogio__taptrung--form div p, .dangnhap__lientiep--form div p {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--text-color-4);
+}
+
+.tonghop__hoatdong__title, .tonghop__todolist__title, .baocao__noidung__title, .baocao__bangxephang__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tonghop__hoatdong__title p, .tonghop__todolist__title p, .baocao__noidung__title p, .baocao__bangxephang__title p {
+    width: 40%;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.tonghop__hoatdong__title div, .tonghop__todolist__title div,
+.baocao__noidung__title div, .baocao__bangxephang__title div {
+    height: 2px;
+    background-color: var(--border-color);
+    width: 80%;
+} 
+
+.canhbao__dangnhap {
+    margin: 30px 0;
+    font-weight: 500;
+    color: #FF6969;
+}
+
+.tonghop__todolist {
+    margin-top: 20px;
+}
+
+.todolist__chitiet {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todolist__chitiet p {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--text-color-4)
+}
+
+.tonghop__todolist .khoangcach {
+    border-top: 2px var(--border-color) dashed;
+    margin: 15px 0;
+}
+
+.todolist__tongket {
+    width: 40%;
+}
+
+.todolist__tongket div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todolist__tongket div p {
+    font-weight: bold;
+    color: var(--text-color-4)
+}
+
+.baocao__noidung__chitiet {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.baocao__noidung__chitiet p {
+    font-size: 20px;
+    color: var(--text-color-4);
+    font-weight: bold;
 }

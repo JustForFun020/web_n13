@@ -13,7 +13,7 @@
 
 .khung__them__nhiemvu input {
     width: 100%;
-    color: #E4DCCF;
+    color: var(--bgr-third);
     border: none;
     font-size: 22px;
     outline: none;
@@ -22,7 +22,7 @@
 }
 
 .khung__them__nhiemvu input::placeholder {
-    color: #E9EDC9;
+    color: var(--bgr-third);
 }
 
 .khung__them__nhiemvu #o--them__ghichu {
@@ -80,4 +80,28 @@
     background: none;
     font-weight: bold;
     font-size: 14px;
+}
+
+.thoigian__kethuc {
+	font-size: 20px;
+	color: var(--text-color-5);
+    height: 45px;
+    display: flex;
+    color: #000;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.thoigian__kethuc input {
+	width: 70px;
+    height: 32px;
+    border: 1px solid var(--bgr-third);
+    color: var(--text-color-4);
+    padding: 4px;
+    font-weight: 500;
+	font-size: 20px;
+}
+
+.thoigian__kethuc input::placeholder {
+	color: var(--text-color-8)
 }

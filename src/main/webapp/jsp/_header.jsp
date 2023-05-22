@@ -102,18 +102,21 @@
                 Add Task
               </button>
             </div>
-            <div class="them__nhiemvu__chitiet hide">
+            <form class="them__nhiemvu__chitiet hide">
               <div class="khung__them__nhiemvu">
                 <input type="text" placeholder="What are you working on?" />
-                <button class="nut--them__ghichu">Add Note +</button>
+                <div class="thoigian__kethuc">
+                	<span>Hoàn thành trong :</span> <input placeholder="HH" type="number"/> <span>giờ </span> <input placeholder="MM" type="number" /> <span>phút</span>
+                </div>
+                <button type="button" class="nut--them__ghichu">Add Note +</button>
                 <textarea name="" class="hide" id="o--them__ghichu" rows="3" placeholder="Add Note"></textarea>
               </div>
               <div class="them__nhiemvu__navbar">
                 <button class="nut--them__nhiemvu" style="margin-left: 20px">Save</button>
-                <button class="nut--huy--them__nhiemvu">Cancel</button>
+                <button type="button" class="nut--huy--them__nhiemvu">Cancel</button>
               </div>
             </div>
-          </div>
+          </form>
         </div>
         <!-- Header Setting -->
         <jsp:include page="_setting.jsp"></jsp:include>

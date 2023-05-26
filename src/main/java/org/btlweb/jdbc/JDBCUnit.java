@@ -1,31 +1,31 @@
 package org.btlweb.jdbc;
 
+
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-import com.microsoft.sqlserver.jdbc.SQLServerDriver;
-
 public class JDBCUnit {
-	public Connection getConnection() throws Exception {
-		String url = "jdbc:sqlserver://"+serverName+":"+portNumber +";instance="+ instance + "databaseName="+dbName+ ";encrypt=true;trustServerCertificate=true";
-		if(instance == null || instance.trim().isEmpty())
-			url = "jdbc:sqlserver://"+serverName+":"+portNumber + "databaseName="+dbName+ ";encrypt=true;trustServerCertificate=true";
-		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-		return DriverManager.getConnection(url, userName, password);
-	}
-	private final String serverName = "localhost";
-	private final String dbName = "WEB";
-	private final String portNumber = "1433";
-	private final String instance = "TRUONGHT";
-	private final String userName = "sa";
-	private final String password = "123";
-	public static void main(String[] args) {
+	public Connection getConnection() {
+		final String username = "root";
+		final String password = "123456";
+		final String url = "jdbc:mysql://localhost:3306/nhom13?createDatabaseIfNotExist=true&useUnicode=yes&characterEncoding=UTF-8";
 		try {
-			System.out.println(new JDBCUnit().getConnection());
-			System.out.println("Sucess");
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			return DriverManager.getConnection(url, username, password);
 		} catch (Exception e) {
-			// TODO: handle exception
-			System.out.println(e);
+			System.out.println("Ket noi failed " + e);
+		}
+		return null; 
+	}
+	
+	public static void main(String[] args) {
+		JDBCUnit jdbc = new JDBCUnit();
+		Connection conn = jdbc.getConnection();
+		if (conn == null) {
+			System.out.println("THAT BAI");
+		} else {
+			System.out.println("THANH CONG");
 		}
 	}
 }

@@ -9,7 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import org.btlweb.model.Report;
-import org.btlweb.model.UserAccounts;
+
 import org.btlweb.jdbc.JDBCUnit;
 
 public class ReportDAO {

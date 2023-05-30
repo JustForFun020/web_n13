@@ -44,6 +44,7 @@ ul li {
 
 a {
   text-decoration: none !important;
+  color: #000
 }
 
 .btn__custom {
@@ -74,4 +75,9 @@ a {
 
 .main {
   font-family: "Roboto", sans-serif;
+}
+
+.active__todo {
+	background: #82CD47;
+    color: #fff;
 }

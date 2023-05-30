@@ -1,5 +1,4 @@
 // xử lý ẩn, hiện todoList
-
 const btnAddTask = document.querySelector('.them__nhiemvu');
 const addTaskDetails = document.querySelector('.them__nhiemvu__chitiet');
 const btnCancelAddTask = document.querySelector('.nut--huy--them__nhiemvu');
@@ -24,5 +23,59 @@ btnAddNote.addEventListener('click', () => {
   areaAddNote.classList.add('show');
   btnAddNote.classList.add('hide');
 });
-
 // END TASK
+
+// ẩn/ hiện todo action 
+const btnActionTodoList = document.querySelector('.nut__hanhdong__todo');
+const listActionTodo = document.querySelector('.danhsach__hanhdong__todo');
+btnActionTodoList.addEventListener('click', () => {
+  listActionTodo.classList.toggle('hide');
+});
+// END TASK
+
+// Click chỉnh sửa todo list
+const listTask = document.querySelectorAll(".danhsach__chitiet__todo")
+const editTask = document.querySelectorAll(".chinhsua__todo")
+const btnEditTask = document.querySelectorAll(".icon__chinhsua__todo")
+btnEditTask.forEach((item, index) => {
+	item.addEventListener('click', () => {
+		listTask.forEach((task, indexTask) => {
+			if(index === indexTask) {
+				task.classList.add("hide")
+			}
+		})
+		editTask.forEach((edit, indexEdit) => {
+			if(index === indexEdit) {
+				edit.classList.add("show")
+				edit.classList.remove("hide")
+			}
+		})
+	})
+})
+// END TASK
+
+// Chỉnh sửa todo list
+const btnEditCancel = document.querySelectorAll(".chinhsua__btn__huybo")
+btnEditCancel.forEach((item, index) => {
+	item.addEventListener("click", () => {
+		listTask.forEach((task, indexTask) => {
+			if(index === indexTask) {
+				task.classList.remove("hide")
+			}
+		})
+		editTask.forEach((edit, indexEdit) => {
+			if(index === indexEdit) {
+				edit.classList.remove("show")
+				edit.classList.add("hide")
+			}
+		})
+	})
+})
+//END TASK
+
+    
+    
+    
+    
+    
+    

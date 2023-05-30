@@ -11,7 +11,7 @@
     border-top-right-radius: 10px;
 }
 
-.khung__them__nhiemvu input {
+.khung__them__nhiemvu input, .form__chinhsua__todo input {
     width: 100%;
     color: var(--bgr-third);
     border: none;
@@ -25,7 +25,7 @@
     color: var(--bgr-third);
 }
 
-.khung__them__nhiemvu #o--them__ghichu {
+.khung__them__nhiemvu #o--them__ghichu, .chinhsua__them__ghichu {
     padding: 12px;
     width: 100%;
     resize: unset;
@@ -35,6 +35,14 @@
     border: none;
     border-radius: 10px;
     background-color: var(--bgr-color-sixth);
+}
+
+.them__todolist {
+	padding-bottom: 24px
+}
+
+.tatca__todo {
+	margin: 20px 0
 }
 
 .khung__them__nhiemvu .nut--them__ghichu {
@@ -50,13 +58,27 @@
     cursor: pointer;
 }
 
-.them__nhiemvu__navbar {
+.them__nhiemvu__navbar, .danhsach__todo__btn {
     padding: 8px 20px;
     height: 20%;
     background-color: #F0EDD4;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 }
+
+.danhsach__todo__btn {
+	display: flex;
+	justify-content: space-between;
+	border-radius: 10px;
+	flex-direction: row-reverse;
+}
+
+.danhsach__todo__btn button {
+	cursor: pointer;
+    width: 80px;
+    height: 35px;
+}
+
 .them__nhiemvu__navbar button {
     cursor: pointer;
     width: 80px;
@@ -64,7 +86,7 @@
     float: right;
 }
 
-.nut--them__nhiemvu {
+.nut--them__nhiemvu, .danhsach__todo__btn .chinhsua__btn__luu {
     font-size: 14px;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
@@ -74,15 +96,18 @@
     background-color: rgb(34, 34, 34);
 }
 
-.nut--huy--them__nhiemvu {
+.nut--huy--them__nhiemvu, 
+.danhsach__todo__btn .chinhsua__btn__huybo, 
+.chinhsua__btn__xoa {
     border: none;
     color: rgb(136, 136, 136);
     background: none;
     font-weight: bold;
     font-size: 14px;
+    cursor: pointer;
 }
 
-.thoigian__kethuc {
+.thoigian__kethuc, .chinhsua__thoigian__ketthuc {
 	font-size: 20px;
 	color: var(--text-color-5);
     height: 45px;
@@ -92,7 +117,7 @@
     justify-content: space-between;
 }
 
-.thoigian__kethuc input {
+.thoigian__kethuc input, .chinhsua__thoigian__ketthuc input {
 	width: 70px;
     height: 32px;
     border: 1px solid var(--bgr-third);
@@ -104,4 +129,74 @@
 
 .thoigian__kethuc input::placeholder {
 	color: var(--text-color-8)
+}
+
+
+.danhsach__chitiet__todo {
+	background: #fff;
+    border-radius: 15px;
+    color: #000;
+    margin: 20px 0
+}
+
+.danhsach__chitiet__todo .chitiet__todo {
+	display: flex;
+    justify-content: space-between;
+    min-height: 60px;
+    align-items: center;
+    padding: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.danhsach__chitiet__todo .ghichu__todo {
+	padding: 16px 60px;
+    text-align: left;
+    background-color: #fbd59c;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.danhsach__chitiet__todo .chitiet__todo .chitiet__todo__thunhat {
+	display: flex;
+	align-items: center;
+}
+
+.form__chinhsua__todo {
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 20px, rgba(0, 0, 0, 0.1) 0px 3px 6px;
+    animation: 0.1s ease-in-out 0s 1 normal none running expand;
+    text-align: left;
+    padding: 20px;
+    color: #000;
+    background: #fff;
+    border-radius: 15px;
+    position: relative;
+}
+
+.icon__chinhsua__todo {
+	width: 30px;
+    height: 30px;
+    background: #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.icon__chinhsua__todo img {
+	height: 20px;
+}
+
+.chitiet__todo__thunhat .icon__todo__kiemtra {
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	cursor: pointer
+}
+
+.chitiet__todo__thunhat .icon__todo__kiemtra img {
+	width: 100%;
+    height: 100%;
+    border-radius: 100px;
 }

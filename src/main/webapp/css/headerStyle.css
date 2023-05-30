@@ -167,6 +167,34 @@
   align-items: center;
   border-bottom: 2px solid rgba(255, 255, 255, 0.6);
   padding-bottom: 14px;
+  position: relative
+}
+
+.phandau__thuba .tao__nhiemvu .danhsach__hanhdong__todo {
+	position: absolute;
+    background: #fff;
+    color: #000;
+    right: 0;
+    top: 40px;
+    padding: 14px !important;
+    z-index: 1;
+    text-align: left;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 20px, rgba(0, 0, 0, 0.1) 0px 3px 6px;
+    border-radius: 6px
+}
+
+.phandau__thuba .tao__nhiemvu .danhsach__hanhdong__todo li {
+	padding: 12px 0;
+	cursor: pointer
+}
+
+.phandau__thuba .tao__nhiemvu .danhsach__hanhdong__todo li a {
+	display: flex;
+	align-items: center;
+}
+
+.phandau__thuba .tao__nhiemvu .danhsach__hanhdong__todo li:hover {
+	opacity: 0.7
 }
 
 .phandau__thuba .tao__nhiemvu button {

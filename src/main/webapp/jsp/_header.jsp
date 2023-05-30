@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page import="org.btlweb.model.TodoList" language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <body>
@@ -91,9 +92,98 @@
           <!-- Create Task -->
           <div class="tao__nhiemvu">
             <p style="font-size: 18px; margin: 0; font-weight: bold">Tasks</p>
-            <button class="nut__tuchon">
+            <button class="nut__tuchon nut__hanhdong__todo">
               <img src="../images/threedots-icon.png" alt="" />
             </button>
+            <ul class="danhsach__hanhdong__todo hide">
+            	<li>
+            		<a href="${pageContext.request.contextPath}/action-task?action=clear-finished-task">
+            			<img style="margin-right: 5px" alt="" src="https://pomofocus.io/icons/delete-black.png">
+            			<span>Clear finished task</span>
+            		</a>
+            	</li>
+            	<li>
+            		<a href="${pageContext.request.contextPath}/action-task?action=clear-inprocess-task">
+            			<img style="margin-right: 5px" alt="" src="https://pomofocus.io/icons/delete-black.png">
+            			<span>Clear in process task</span>
+            		</a>
+            	</li>
+            	<li>
+            		<a href="${pageContext.request.contextPath}/action-task?action=clear-all-task">
+            			<img style="margin-right: 5px" alt="" src="https://pomofocus.io/icons/delete-black.png">
+            			<span>Clear all task</span>
+            		</a>
+            	</li>
+            	<li>
+            		<a href="${pageContext.request.contextPath}/action-task?action=done-all-task"> 
+            			<img style="margin-right: 5px" alt="" src="https://pomofocus.io/icons/clear-black.png"> 
+						<span>Done all task</span>
+					</a>
+            	</li>
+            </ul>
+          </div>
+          <div class="tatca__todo">
+    		<c:forEach items="${a.getAllTodoList()}" var="item" >
+        		<div class="danhsach__chitiet__todo">
+        				<c:choose>
+        					<c:when test="${item.getStatus().equals('Done')}">
+        					<div class="chitiet__todo active__todo ">
+        						<form class="chitiet__todo__thunhat form-trangthai-hoanthanh" action="${pageContext.request.contextPath}/edit-task?edit-action=change-inprocess-status" method="post">
+        							<input name="chinhsua__todo__id" value="${item.getID()}" type="hidden" >
+        							<input value="${item.getStatus()}" type="hidden" />
+        							<button class="icon__todo__kiemtra nut-trangthai-hoanthanh">
+	        							<img alt="" src="../images/inprocess-icon.png" >
+    	    						</button>
+	    	    					<span>${item.getTodoName()}</span>
+        						</form>
+        						<div  class="icon__chinhsua__todo" >
+		        			<img alt="" src="../images/threedots-icon.png">       			
+        				</div>
+        						</div>
+        					</c:when>
+        					<c:when test="${item.getStatus().equals('In Process')}">
+        					<div class="chitiet__todo">
+        						<form class="chitiet__todo__thunhat form-trangthai-trongtientrinh" action="${pageContext.request.contextPath}/edit-task?edit-action=change-done-status" method="post"  >
+        							<input name="chinhsua__todo__id" value="${item.getID()}" type="hidden" />
+        							<input value="${item.getStatus()}" type="hidden" />
+        							<button  class="icon__todo__kiemtra nut-trangthai-trongtientrinh">
+	        							<img alt="" src="../images/icon-check-todo.png" >
+    	    						</button>
+	    	    					<span>${item.getTodoName()}</span>
+        						</form>
+        						<div  class="icon__chinhsua__todo" >
+		        			<img alt="" src="../images/threedots-icon.png">       			
+        				</div>
+        						</div>
+        					</c:when>
+        				</c:choose>
+        			<div class="ghichu__todo">
+	        			<p>${item.getNote()}</p>
+           			</div>
+        		</div>
+        		<div class="chinhsua__todo hide">
+        			<div class="form__chinhsua__todo">
+              			<form action="${pageContext.request.contextPath}/edit-task?edit-action=edit-update-task" method="post">
+              				<input type="hidden" name="chinhsua__todo__id" value="${item.getID()}" />
+                			<input type="text" placeholder="What are you working on?" name="chinhsua__todoName" value="${item.getTodoName() }"/>
+                			<div class="chinhsua__thoigian__ketthuc">
+                				<span>Hoàn thành trong :</span> <input name="chinhsua__endAt" placeholder="25" type="number" required/> <span>phút</span>
+                			</div>
+                			<textarea name="chinhsua__note" class="chinhsua__them__ghichu" rows="3" col="10" placeholder="Add Note">${item.getNote()}</textarea>
+              				<div class="danhsach__todo__btn">
+              					<div>
+	                				<button type="button" class="chinhsua__btn__huybo">Cancel</button>
+	              					<button class="chinhsua__btn__luu">Save</button>
+              					</div>
+              				</div>
+             		 	</form>
+             		 	<form style="position: absolute; bottom: 28px; left: 32px;" action="${pageContext.request.contextPath}/edit-task?edit-action=edit-delete-task" method="post">
+	              			<input type="hidden" name="chinhsua__todo__id" value="${item.getID()}" />
+	              			<button style="padding: 10px;" class="chinhsua__btn__xoa">Delete</button>
+              			</form>
+          			</div>
+          		</div>
+        	</c:forEach> 
           </div>
           <div class="them__todolist">
             <div class="them__nhiemvu">
@@ -102,14 +192,14 @@
                 Add Task
               </button>
             </div>
-            <form class="them__nhiemvu__chitiet hide">
+            <form class="them__nhiemvu__chitiet hide" method="POST" action="${pageContext.request.contextPath}/addtodolist">
               <div class="khung__them__nhiemvu">
-                <input type="text" placeholder="What are you working on?" />
+                <input type="text" placeholder="What are you working on?" name="todoName" required/>
                 <div class="thoigian__kethuc">
-                	<span>Hoàn thành trong :</span> <input placeholder="HH" type="number"/> <span>giờ </span> <input placeholder="MM" type="number" /> <span>phút</span>
+                	<span>Hoàn thành trong :</span> <input required name="endAt" placeholder="MM" type="number" /> <span>phút</span>
                 </div>
                 <button type="button" class="nut--them__ghichu">Add Note +</button>
-                <textarea name="" class="hide" id="o--them__ghichu" rows="3" placeholder="Add Note"></textarea>
+                <textarea name="note" class="hide" id="o--them__ghichu" rows="3" placeholder="Add Note"></textarea>
               </div>
               <div class="them__nhiemvu__navbar">
                 <button class="nut--them__nhiemvu" style="margin-left: 20px">Save</button>

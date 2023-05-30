@@ -7,14 +7,14 @@ import com.microsoft.sqlserver.jdbc.SQLServerDriver;
 
 public class JDBCUnit {
 	public Connection getConnection() throws Exception {
-		String url = "jdbc:sqlserver://"+serverName+":"+portNumber +";instance="+ instance + "databaseName="+dbName+ ";encrypt=true;trustServerCertificate=true";
+		String url = "jdbc:sqlserver://"+serverName+":"+portNumber +";instance="+ instance + "databaseName="+dbName+ ";encrypt=true;trustServerCertificate=true;characterEncoding=UTF-8";
 		if(instance == null || instance.trim().isEmpty())
-			url = "jdbc:sqlserver://"+serverName+":"+portNumber + "databaseName="+dbName+ ";encrypt=true;trustServerCertificate=true";
+			url = "jdbc:sqlserver://"+serverName+":"+portNumber + "databaseName="+dbName+ ";encrypt=true;trustServerCertificate=true;characterEncoding=UTF-8";
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		return DriverManager.getConnection(url, userName, password);
 	}
 	private final String serverName = "localhost";
-	private final String dbName = "WEB";
+	private final String dbName = "BTLWEB";
 	private final String portNumber = "1433";
 	private final String instance = "TRUONGHT";
 	private final String userName = "sa";

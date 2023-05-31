@@ -12,6 +12,11 @@ import org.btlweb.dao.ActionTodoListDAO;
 
 @ WebServlet( urlPatterns ="/action-task")
 public class ActionTodoListController extends HttpServlet {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public ActionTodoListController() {
 		super();
 	}

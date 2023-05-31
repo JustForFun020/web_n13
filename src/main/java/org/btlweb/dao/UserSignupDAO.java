@@ -16,7 +16,7 @@ public class UserSignupDAO {
 
 	public UserSignup registerUser(String fullname,String username, String password, String email) {
 		UserSignup newUser = null;
-		String query = "INSERT INTO User (userID, fullname, username, password, role, lastLogin, email) VALUES (null,?, ?, ?,'user',GETDATE(), ?)";
+		String query = "INSERT INTO [BLT_WEB].[dbo].[Users] (fullname, username, password, role, lastLogin, email) VALUES (?, ?, ?,'user',GETDATE(), ?)";
 		try {
 			c = new JDBCUnit().getConnection();
 			ps = c.prepareStatement(query);

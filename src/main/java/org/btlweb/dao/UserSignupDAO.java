@@ -13,10 +13,10 @@ public class UserSignupDAO {
 	Connection c = null;
 	PreparedStatement ps = null;
 	ResultSet rs = null;
-	
-	public UserSignup registerUser(String fullname,String username, String email, String password) {
+
+	public UserSignup registerUser(String fullname,String username, String password, String email) {
 		UserSignup newUser = null;
-		String query = "INSERT INTO [WEB].[dbo].[Users] (fullname, username, email, password, thumbnail, role, lastLogin) VALUES (?, ?, ?, ?, 'https://icons.veryicon.com/png/o/internet--web/prejudice/user-128.png' , 'user',GETDATE())";
+		String query = "INSERT INTO [BLT_WEB].[dbo].[Users] (fullname, username, password, role, lastLogin, email) VALUES (?, ?, ?,'user',GETDATE(), ?)";
 		try {
 			c = new JDBCUnit().getConnection();
 			ps = c.prepareStatement(query);

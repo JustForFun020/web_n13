@@ -17,6 +17,11 @@ import org.btlweb.jdbc.JDBCUnit;
 @WebServlet( urlPatterns = "/addtodolist")
 public class AddTodoListController extends HttpServlet  {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public AddTodoListController() {
 		super();
 	}

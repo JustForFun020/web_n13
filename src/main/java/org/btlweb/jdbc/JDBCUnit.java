@@ -14,7 +14,7 @@ public class JDBCUnit {
 		return DriverManager.getConnection(url, userName, password);
 	}
 	private final String serverName = "localhost";
-	private final String dbName = "BTLWEB";
+	private final String dbName = "BTL_WEB";
 	private final String portNumber = "1433";
 	private final String instance = "TRUONGHT";
 	private final String userName = "sa";

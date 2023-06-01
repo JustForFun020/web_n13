@@ -22,7 +22,7 @@
 </head>
 <body>
 	<main class="dangnhap__baoboc">
-	
+
 		<div class="tieude">
 			<img src="/BTLWEB_N13/images/icon-white2.png" alt="pomofocus-icon">
 			<h1>Pomodoro</h1>
@@ -30,17 +30,17 @@
 		<div class="dangnhap_chu">
 			<h3>Đăng nhập</h3>
 		</div>
-		
+
 		<div class="dangnhap__form">
-			
-			<form class="form" role="form" action="/BTLWEB_N13/login-member" method="post">
-      		
+
+			<form class="form" role="form" action="/BTLWEB_N13/login-admin" method="post">
+
         		<div class="form__chu">
           			<h1 style="color: rgb(196, 196, 196)">Đăng Nhập</h1>
         		</div>
-        		 
+
         		<div style="display: flex; flex-direction: column">
-        		
+
           			<div style="display: flex; flex-direction: column; margin: 15px 0">
           			<p class="text-danger" style="color: rgb(196, 196, 196);">${msg1}</p>
             			<label for="taikhoan">Tài Khoản</label>
@@ -51,16 +51,11 @@
             			<input type="text" id="matkhau" name="password"  />
           			</div>
           		<button class="nut__dangnhap">Đăng Nhập</button>
-          		<button class="nut__quenmatkhau">Quên Mật Khẩu</button>
+
         		</div>
       		</form>
     	</div>
-		<div class="dangnhap__cauhoi">
-			<span>Bạn chưa có tài khoản?</span>
-		</div>
-		<div class="dangnhap__link">
-			<h3>Đăng ký</h3>
-		</div>
+
 	</main>
 </body>
 </html>

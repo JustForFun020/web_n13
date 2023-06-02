@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="container">
-    	<div class="baoboc__form__taonguoidung">
+    	<div class="baoboc__form__taonguoidung ">
         	<div class="form__tieude">Tạo người dùng mới</div>
         	<div class="khoangcach"></div>
         	<form action="/BTLWEB_N13/admin/user/add" method="post" class="form__taonguoidung">

@@ -14,7 +14,7 @@
 		<div class="row">
 			<div class="phandau__danhsach_nguoidung">
 				<div class="nut-them__nguoidung">
-					<a href="/BTLWEB_N13/admin/user/add" class="btn btn-primary">Thêm mới</a>
+					<a href="/BTLWEB_N13/admin/user/add" class="btn btn-primary ">Thêm mới</a>
 				</div>
 				<div class="danhsach__nguoidung__tieude">Danh Sách Người Dùng</div>
 				<form class="form-inline form__timkiem__nguoidung" action="/BTLWEB_N13/admin/user/search"

@@ -43,5 +43,6 @@
 	<script src="../js/script.js"></script>
 	<script src="../js/report.js"></script>
 	<script src="../js/todolist.js"></script>
+	<script src="../js/setting.js"></script>
 </body>
 </html>

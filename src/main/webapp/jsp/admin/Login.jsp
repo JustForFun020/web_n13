@@ -48,7 +48,7 @@
           			</div>
           			<div style="display: flex; flex-direction: column; margin-bottom: 20px">
             			<label for="matkhau">Mật Khẩu</label>
-            			<input type="text" id="matkhau" name="password"  />
+            			<input type="password" id="matkhau" name="password"  />
           			</div>
           		<button class="nut__dangnhap">Đăng Nhập</button>
 

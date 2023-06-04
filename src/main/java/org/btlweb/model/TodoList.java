@@ -4,14 +4,15 @@ import java.sql.Date;
 
 public class TodoList {
 	private int id;
-	private String userID;
+	private int userID;
 	private String todoName;
 	private Date createAt;
 	private Date endAt;
 	private String note;
 	private String status;
 	
-	public TodoList(int id ,String todoName, String note, String status) {
+	public TodoList(int id, int userID ,String todoName, String note, String status) {
+		this.userID = userID;
 		this.todoName = todoName;
 		this.note = note;
 		this.id = id;
@@ -48,5 +49,13 @@ public class TodoList {
 	
 	public void setStatus(String status) {
 		this.status = status;
+	}
+	
+	public int getUserID() {
+		return userID;
+	}
+	
+	public void setUserID(int userID) {
+		this.userID = userID;
 	}
 }

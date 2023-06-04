@@ -149,4 +149,18 @@ listTypeOfTime.forEach((item, index) =>
   })
 );
 // END Task
+// Ẩn hiện danh sách hoạt động người dùng
+const userBtn = document.querySelector(".nguoidung__nut")
+const listUserActionBtn = document.querySelector(".danhsach__hanhdong__nguoidung")
+userBtn.addEventListener("click", () => {
+	listUserActionBtn.classList.toggle("hide")
+})
+// END TASK
 
+// Stop Submit
+function stopSubmit(event){
+	event.preventDefault();
+	alert("Vui lòng đăng nhập để sử dụng chức năng này")
+	console.log(123)
+}
+//End TASK

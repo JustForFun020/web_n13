@@ -14,11 +14,20 @@ import org.btlweb.dao.TodoListDAO;
 import org.btlweb.model.TodoList;
 
 public class TodoListController extends HttpServlet {
-	 @Override
+	 /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
 	 protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		 TodoListDAO todoListDAO = new TodoListDAO();
-		List<TodoList> todoList = todoListDAO.getAllTodoList();
+		int userID = (int)req.getSession().getAttribute("UserID");
+		List<TodoList> todoList = todoListDAO.getAllTodoList(userID);
+		for (TodoList todo : todoList) {
+			System.out.println(todo.getTodoName());
+		}
 		req.setAttribute("todoLists", todoList);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/jsp/_header.jsp");
 		dispatcher.forward(req, resp);

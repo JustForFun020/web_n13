@@ -48,11 +48,11 @@
           			</div>
           			<div style="display: flex; flex-direction: column; margin-bottom: 20px">
             			<label for="matkhau">Mật Khẩu</label>
-            			<input type="text" id="matkhau" name="matkhau" />
+            			<input type="password" id="matkhau" name="matkhau" />
           			</div>
           			<div style="display: flex; flex-direction: column; margin-bottom: 20px">
             			<label for="xacnhanmatkhau">Xác Nhận Mật Khẩu</label>
-            			<input type="text" id="xacnhanmatkhau" name="xacnhanmatkhau" />
+            			<input type="password" id="xacnhanmatkhau" name="xacnhanmatkhau" />
           			</div>
           		<button class="nut__dangky">Đăng Ký</button>
         		</div>
@@ -61,7 +61,7 @@
 		<div class="dangky__cauhoi">
 			<span>Bạn đã có tài khoản?</span>
 		</div>
-		<div class="dangky__link">
+		<div class="dangky__link" onclick="window.location.href='/BTLWEB_N13/jsp/login.jsp'">
 			<h3>Đăng nhập</h3>
 		</div>
 	</main>

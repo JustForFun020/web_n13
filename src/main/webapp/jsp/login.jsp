@@ -48,7 +48,7 @@
           			</div>
           			<div style="display: flex; flex-direction: column; margin-bottom: 20px">
             			<label for="matkhau">Mật Khẩu</label>
-            			<input type="text" id="matkhau" name="password"  />
+            			<input type="password" id="matkhau" name="password"  />
           			</div>
           		<button class="nut__dangnhap">Đăng Nhập</button>
           		<button class="nut__quenmatkhau">Quên Mật Khẩu</button>
@@ -58,7 +58,7 @@
 		<div class="dangnhap__cauhoi">
 			<span>Bạn chưa có tài khoản?</span>
 		</div>
-		<div class="dangnhap__link">
+		<div class="dangnhap__link" onclick="window.location.href='/BTLWEB_N13/jsp/signup.jsp'">
 			<h3>Đăng ký</h3>
 		</div>
 	</main>

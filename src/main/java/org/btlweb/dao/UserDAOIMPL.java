@@ -16,7 +16,7 @@ public class UserDAOIMPL extends JDBCUnit implements UserDAO {
 
 	@Override
 	public void add(UserLogin user) {
-		String sql = "INSERT INTO [BTL_WEB].[dbo].[Users] ( fullname, username, password, role, image, lastlogin, email) VALUES ( ?, ?, ?, ?, 'https://icons.veryicon.com/png/o/internet--web/prejudice/user-128.png', GETDATE(),?)";
+		String sql = "INSERT INTO [BTLWEB].[dbo].[Users] ( fullname, username, password, role, image, lastlogin, email) VALUES ( ?, ?, ?, ?, 'https://icons.veryicon.com/png/o/internet--web/prejudice/user-128.png', GETDATE(),?)";
 		try {
 			try {
 				conn = new JDBCUnit().getConnection();
@@ -40,7 +40,7 @@ public class UserDAOIMPL extends JDBCUnit implements UserDAO {
 
 	@Override
 	public void update(UserLogin user) {
-		String sql = "UPDATE [BTL_WEB].[dbo].[Users]  SET fullname=?, username=?, password=?, role=?, image=?, lastlogin=? ,email=? WHERE userID=?";
+		String sql = "UPDATE [BTLWEB].[dbo].[Users]  SET fullname=?, username=?, password=?, role=?, image=?, lastlogin=? ,email=? WHERE userID=?";
 		try {
 			try {
 				conn = new JDBCUnit().getConnection();
@@ -68,7 +68,7 @@ public class UserDAOIMPL extends JDBCUnit implements UserDAO {
 	@Override
 
 	public void delete(int id) {
-		String sql = "DELETE FROM [BTL_WEB].[dbo].[Users]  WHERE userID = ?";
+		String sql = "DELETE FROM [BTLWEB].[dbo].[Users]  WHERE id = ?";
 
 		try {
 			try {
@@ -92,7 +92,7 @@ public class UserDAOIMPL extends JDBCUnit implements UserDAO {
 	public List<UserLogin> getAllUsers() {
 		List<UserLogin> users = new ArrayList<>();
 
-		String sql = "SELECT * FROM [BTL_WEB].[dbo].[Users] ";
+		String sql = "SELECT * FROM [BTLWEB].[dbo].[Users] ";
 		try {
 			try {
 				conn = new JDBCUnit().getConnection();
@@ -116,7 +116,7 @@ public class UserDAOIMPL extends JDBCUnit implements UserDAO {
 
 	@Override
 	public UserLogin get(int id) {
-		String sql = "SELECT * FROM [BTL_WEB].[dbo].[Users]  WHERE userID = ?";
+		String sql = "SELECT * FROM [BTLWEB].[dbo].[Users]  WHERE id = ?";
 
 		try {
 			try {
@@ -147,7 +147,7 @@ public class UserDAOIMPL extends JDBCUnit implements UserDAO {
 	public List<UserLogin> search(String fullName) {
 		List<UserLogin> users = new ArrayList<>();
 
-		String sql = "SELECT * FROM [BTL_WEB].[dbo].[Users]  WHERE fullName LIKE ?";
+		String sql = "SELECT * FROM [BTLWEB].[dbo].[Users]  WHERE fullName LIKE ?";
 		try {
 			try {
 				conn = new JDBCUnit().getConnection();
@@ -173,7 +173,7 @@ public class UserDAOIMPL extends JDBCUnit implements UserDAO {
 
 	@Override
 	public UserLogin getByUsername(String username) {
-		String sql = "SELECT * FROM [BTL_WEB].[dbo].[Users]  WHERE username = ?";
+		String sql = "SELECT * FROM [BTLWEB].[dbo].[Users]  WHERE username = ?";
 
 		try {
 			try {
@@ -203,7 +203,7 @@ public class UserDAOIMPL extends JDBCUnit implements UserDAO {
 	private UserLogin rowMapper(ResultSet resultSet) throws SQLException {
 
 		UserLogin user = new UserLogin();
-		user.setUserID(resultSet.getInt("userID"));
+		user.setUserID(resultSet.getInt("id"));
 		user.setfullName(resultSet.getString("fullName"));
 		user.setUsername(resultSet.getString("username"));
 		user.setPassword(resultSet.getString("password"));

@@ -47,12 +47,13 @@ public class LoginUserController extends HttpServlet {
 		UserLogin user = userDao.getByUsername(username);
 
 		if (user != null && user.getPassword().equals(pass) && user.getRole().equals("user")) {
+			int userID = user.getUserID();
+			System.out.println(user.getUserID());
+			req.getSession().setAttribute("UserID", userID);
 			System.out.println("Log in success");
-			resp.sendRedirect(req.getContextPath() + "/jsp/index.jsp");
-			
-
+			resp.sendRedirect(req.getContextPath() + "/jsp/user/index.jsp");			
 		} else {
-			System.out.println("Fail");
+			System.out.println(req.getContextPath());
 			resp.sendRedirect(req.getContextPath() + "/login-member?errCode=100");
 		}
 	}

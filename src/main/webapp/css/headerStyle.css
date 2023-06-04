@@ -502,6 +502,54 @@
   border: 2px solid rgb(34, 34, 34);
 }
 
+.nguoidung__nut {
+	background: var(--bgr-btn);
+    border-radius: 100%;
+    cursor: pointer;
+    margin-left: 10px;
+    position: relative;
+}
+
+.nguoidung__nut img {
+	width: 30px;
+}
+
+.danhsach__hanhdong__nguoidung {
+	position: absolute;
+    width: 160px;
+    border-radius: 16px;
+    color: var(--text-color-6);
+    background-color: #fff;
+    top: 42px;
+}
+
+.danhsach__hanhdong__nguoidung li {
+	padding: 12px;
+	border-radius: 16px
+}
+
+.danhsach__hanhdong__nguoidung li:hover {
+	background-color: var(--bgr-btn-3)
+}
+
+.danhsach__hanhdong__nguoidung li form {
+	display: flex;
+	align-items: center
+}
+
+.danhsach__hanhdong__nguoidung li form img {
+	width: 18px;
+	margin-right: 6px
+}
+
+.danhsach__hanhdong__nguoidung li button {
+	width: 100%;
+    font-size: 16px !important;
+    margin: 0 !important;
+    color: var(--text-color-6) !important;
+    padding: 0 !important;
+}
+
 @keyframes hoverAnimation {
   from {
     opacity: 0.8;

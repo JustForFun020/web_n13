@@ -33,7 +33,11 @@ public class AddTodoListController extends HttpServlet  {
 		String note = req.getParameter("note");
 		String status = "In Process";
 		AddTodoListDAO addTodoList = new AddTodoListDAO();
-		addTodoList.addTodoList(todoName, endAt, note, status);
-		resp.sendRedirect(req.getContextPath() + "/jsp/index.jsp");
+		addTodoList.addTodoList(todoName, endAt, note, status, req);
+		int userID=(int)req.getSession().getAttribute("UserID");
+		if(userID <= 0) {
+			resp.sendRedirect(req.getContextPath() + "/jsp/index.jsp");
+		}
+		else resp.sendRedirect(req.getContextPath() + "/jsp/user/index.jsp");
 	}
 }

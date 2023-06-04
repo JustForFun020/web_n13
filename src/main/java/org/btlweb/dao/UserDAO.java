@@ -1,4 +1,5 @@
 package org.btlweb.dao;
+
 import java.util.List;
 
 import org.btlweb.model.UserLogin;
@@ -9,13 +10,20 @@ public interface UserDAO {
 	void update(UserLogin UserLogin);
 
 	void delete(int id);
+
+	boolean checkUsernameExists(String username);
+
+	boolean checkEmail(String email);
+
+	void updatePassword(String email, String newPassword);
 	
-	
+	boolean checkPassword(String email, String password) ;
 
 	UserLogin get(int id);// duy nhat
 
 	UserLogin getByUsername(String username);// duy nhat
 
 	List<UserLogin> search(String name);
-	 List<UserLogin> getAllUsers();
+
+	List<UserLogin> getAllUsers();
 }

@@ -36,7 +36,7 @@
             <div class="form-group">
                 <label for="role">Vai trò:</label>
                 <select class="form-control" id="role" name="role" required>
-                    <option value="member">Member</option>
+                    <option value="user">Member</option>
                     <option value="admin">Admin</option>
                 </select>
             </div>

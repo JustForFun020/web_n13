@@ -3,9 +3,9 @@ package org.btlweb.jdbc;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-import com.microsoft.sqlserver.jdbc.SQLServerDriver;
 
-public class JDBCUnit {
+
+public class JDBCConnection {
 	public Connection getConnection() throws Exception {
 		String url = "jdbc:sqlserver://"+serverName+":"+portNumber +";instance="+ instance + "databaseName="+dbName+ ";encrypt=true;trustServerCertificate=true";
 		if(instance == null || instance.trim().isEmpty())
@@ -21,7 +21,7 @@ public class JDBCUnit {
 	private final String password = "123";
 	public static void main(String[] args) {
 		try {
-			System.out.println(new JDBCUnit().getConnection());
+			System.out.println(new JDBCConnection().getConnection());
 			System.out.println("Sucess");
 		} catch (Exception e) {
 			// TODO: handle exception

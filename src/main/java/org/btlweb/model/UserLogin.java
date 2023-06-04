@@ -8,13 +8,13 @@ public class UserLogin {
     private String password;
     private String role;
     private String image;
-    private String lastLogin;
+  
     private String email;
     
     public UserLogin() {
     }
     
-    public UserLogin(int id, int userID, String fullName, String username, String password, String role, String image, String lastLogin,String email) {
+    public UserLogin(int id, int userID, String fullName, String username, String password, String role, String image,String email) {
         this.id = id;
         this.userID = userID;
         this.fullName = fullName;
@@ -22,7 +22,7 @@ public class UserLogin {
         this.password = password;
         this.role = role;
         this.image = image;
-        this.lastLogin = lastLogin;
+       
         this.email = email;
     }
     
@@ -84,13 +84,7 @@ public class UserLogin {
         this.image = image;
     }
     
-    public String getLastLogin() {
-        return lastLogin;
-    }
     
-    public void setLastLogin(String lastLogin) {
-        this.lastLogin = lastLogin;
-    }
     public String getemail() {
 		return email;
 	}

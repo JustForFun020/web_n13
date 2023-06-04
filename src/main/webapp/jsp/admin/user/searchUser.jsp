@@ -30,7 +30,7 @@
 						<th>Password</th>
 						<th>Role</th>
 						<th>Image</th>
-						<th>Last Login</th>
+					
 						<th>Lựa chọn</th>
 
 					</tr>
@@ -45,10 +45,10 @@
 								<td>${user.role}</td>
 								<td><img class="card-img-top" src="${user.image}"
 									alt="anhnguoidung" style="width: 90px; height: 90px;"></td>
-								<td>${user.lastLogin}</td>
+								
 
 								<td>
-									<form action="/BTLWEB_N13/admin/user/update" method="post">
+									<form action="/BTLWEB_N13/admin/user/update" method="get">
 										<input type="hidden" name="uid" value="${user.getUserID()}">
 										<button type="submit" class="btn btn-danger"
 											>Sửa</button>

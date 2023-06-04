@@ -27,9 +27,7 @@ public class LoginController extends HttpServlet {
 		if (code != null && code.equals("100")) {
 			req.setAttribute("msg1", "Tài khoản hoặc mật khẩu sai");
 		}
-		if (code != null && code.equals("400")) {
-			req.setAttribute("msg1", "Tài khoản đã đăng nhập nhiều lần. Bạn có thể vào database, reset giá trị login counter về 0");
-		}
+		
 		RequestDispatcher dispathcer = req.getRequestDispatcher("/jsp/login.jsp");
 		dispathcer.forward(req, resp);
 	}

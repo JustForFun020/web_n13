@@ -18,4 +18,7 @@ public interface UserDAO {
 	List<UserLogin> search(String name);
 
 	List<UserLogin> getAllUsers();
+
+	int dayLogin(int id);
+	int hourFocus(int id);
 }

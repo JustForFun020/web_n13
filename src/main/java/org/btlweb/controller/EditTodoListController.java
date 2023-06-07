@@ -37,19 +37,19 @@ public class EditTodoListController extends HttpServlet {
 						String note = req.getParameter("chinhsua__note");
 						editTodoListDAO.updateTask(todoID, todoName, endAt, note);
 					}
-					resp.sendRedirect(req.getContextPath() + "/jsp/index.jsp");
+					resp.sendRedirect(req.getContextPath() + "/jsp/user/index.jsp");
 					break;
 				case "edit-delete-task":
 					 editTodoListDAO.deleteTask(todoID);
-					 resp.sendRedirect(req.getContextPath() + "/jsp/index.jsp");
+					 resp.sendRedirect(req.getContextPath() + "/jsp/user/index.jsp");
 					break;
 				case "change-done-status":
 					 editTodoListDAO.changeStatusDone(todoID);
-					 resp.sendRedirect(req.getContextPath() + "/jsp/index.jsp");
+					 resp.sendRedirect(req.getContextPath() + "/jsp/user/index.jsp");
 					break;
 				case "change-inprocess-status":
 					 editTodoListDAO.changeStatusInProcess(todoID);
-					 resp.sendRedirect(req.getContextPath() + "/jsp/index.jsp");
+					 resp.sendRedirect(req.getContextPath() + "/jsp/user/index.jsp");
 					break;
 			default:
 				throw new IllegalArgumentException("Unexpected value: " + action);

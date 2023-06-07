@@ -256,10 +256,11 @@
 					</div>
 				</form>
 			</div>
-			<!-- Header Setting -->
-			<jsp:include page="_settingUser.jsp"></jsp:include>
-			<!-- Header Report -->
-			<jsp:include page="/jsp/user/report/index.jsp"></jsp:include>
+		</div>
+		<!-- Header Setting -->
+		<jsp:include page="_settingUser.jsp"></jsp:include>
+		<!-- Header Report -->
+		<jsp:include page="/jsp/user/report/index.jsp"></jsp:include>
 	</header>
 </body>
 </html>

@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <div class="baocao__noidung baocao__bangxephang hide">
 	<div class="baocao__bangxephang__title">
-		<p>Bảng Xếp Hạng</p>
+		<p>Ranking</p>
 		<div></div>
 	</div>
 </div>

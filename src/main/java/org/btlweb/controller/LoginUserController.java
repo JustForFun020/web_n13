@@ -28,7 +28,6 @@ public class LoginUserController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String code = req.getParameter("errCode");
-
 		if (code != null && code.equals("100")) {
 			req.setAttribute("msg1", "Tài khoản hoặc mật khẩu sai");
 		}
@@ -48,12 +47,13 @@ public class LoginUserController extends HttpServlet {
 
 		if (user != null && user.getPassword().equals(pass) && user.getRole().equals("user")) {
 			int userID = user.getUserID();
-			System.out.println(user.getUserID());
+			int streak = userDao.dayLogin(userID);
+			int hourFocus = userDao.hourFocus(userID);
+			req.getSession().setAttribute("streak", streak);
+			req.getSession().setAttribute("hourFocus", hourFocus);
 			req.getSession().setAttribute("UserID", userID);
-			System.out.println("Log in success");
-			resp.sendRedirect(req.getContextPath() + "/jsp/user/index.jsp");			
+			resp.sendRedirect(req.getContextPath() + "/jsp/user/index.jsp");		
 		} else {
-			System.out.println(req.getContextPath());
 			resp.sendRedirect(req.getContextPath() + "/login-member?errCode=100");
 		}
 	}

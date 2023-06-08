@@ -173,6 +173,10 @@
     margin: 20px 0;
 }
 
+.baocao__noidung__chitiet > div {
+	margin-bottom: 5px
+}
+
 .baocao__noidung__chitiet p {
     font-size: 20px;
     color: var(--text-color-4);
@@ -184,4 +188,9 @@
 	font-weight: unset;
 	color: var(--text-color-6);
 	margin-bottom: 5px;
+}
+
+.danhsach__chitiet__todo:hover {
+	box-shadow: 0 0 5px #000;
+	transform: scale(1.03)
 }

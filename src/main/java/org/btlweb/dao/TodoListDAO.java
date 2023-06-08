@@ -24,7 +24,7 @@ public class TodoListDAO {
 			ps.setInt(1, userID);
 			rs = ps.executeQuery();
 			while(rs.next()) {
-				todoLists.add(new TodoList(rs.getInt(1),rs.getInt(2) ,rs.getString(3), rs.getString(6), rs.getString(7)));
+				todoLists.add(new TodoList(rs.getInt(1),rs.getInt(2),rs.getDate(4), rs.getDate(5) ,rs.getString(3), rs.getString(6), rs.getString(7)));
 			}
 		} catch (Exception e) {
 			// TODO: handle exception

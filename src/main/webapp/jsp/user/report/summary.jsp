@@ -83,21 +83,3 @@
 		</div>
 	</div>
 </div>
-<script>
-    function getData() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                var data = JSON.parse(this.responseText);
-                document.getElementById("totalValue").innerHTML = data.total;
-                document.getElementById("doneValue").innerHTML = data.done;
-                document.getElementById("inProcessValue").innerHTML = data.process;
-            }
-        };
-        xhttp.open("GET", "${pageContext.request.contextPath}/hilo", true);
-        xhttp.send();
-    }
-    document.addEventListener("DOMContentLoaded", function() {
-        getData();
-    });
-</script>

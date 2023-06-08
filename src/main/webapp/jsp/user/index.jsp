@@ -45,5 +45,69 @@
 	<script src="/BTLWEB_N13/js/report.js"></script>
 	<script src="/BTLWEB_N13/js/todolist.js"></script>
 	<script src="/BTLWEB_N13/js/setting.js"></script>
+	<!-- <canvas id="myChart" width="400" height="400"></canvas> -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script>
+        function createChart(data) {
+            const chartData = JSON.parse(data);
+            const labels = chartData.map(entry => entry.label);
+            const values = chartData.map(entry => entry.data);
+
+            const ctx = document.getElementById('myChart').getContext('2d');
+            const chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Thống Kê TodoList',
+                        data: values,
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        function loadChartData() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                        const data = xhr.responseText;
+                        createChart(data);
+                }
+            };
+            xhr.open("GET", "${pageContext.request.contextPath}/chart", true);
+            xhr.send();
+        }
+
+        loadChartData();
+    </script>
+    <script>
+    function getData() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var data = JSON.parse(this.responseText);
+                document.getElementById("totalValue").innerHTML = data.total;
+                document.getElementById("doneValue").innerHTML = data.done;
+                document.getElementById("inProcessValue").innerHTML = data.process;
+            }
+        };
+        xhttp.open("GET", "${pageContext.request.contextPath}/hilo", true);
+        xhttp.send();
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+        getData();
+    });
+</script>
 </body>
 </html>

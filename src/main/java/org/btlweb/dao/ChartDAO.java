@@ -15,12 +15,13 @@ public class ChartDAO {
     PreparedStatement ps = null;
     ResultSet rs = null;
 
-    public List<String> getLabels() {
+    public List<String> getLabels(int userID) {
         List<String> labels = new ArrayList<>();
-        String query = "SELECT createAt FROM [BTLWEB].[dbo].[TodoList]";
+        String query = "SELECT createAt FROM [BTLWEB].[dbo].[TodoList] where userID = ?";
         try {
             c = new JDBCUnit().getConnection();
             ps = c.prepareStatement(query);
+            ps.setInt(1, userID);
             rs = ps.executeQuery();
             while(rs.next()) {
                 Date createAt = rs.getDate(1);
@@ -34,12 +35,13 @@ public class ChartDAO {
         return labels;
     }
 
-    public List<Integer> getData() {
+    public List<Integer> getData(int userID) {
         List<Integer> data = new ArrayList<>();
-        String query = "SELECT COUNT(*) FROM [BTLWEB].[dbo].[TodoList] GROUP BY createAt";
+        String query = "SELECT COUNT(*) FROM [BTLWEB].[dbo].[TodoList] where userID = ? GROUP BY createAt";
         try {
             c = new JDBCUnit().getConnection();
             ps = c.prepareStatement(query);
+            ps.setInt(1, userID);
             rs = ps.executeQuery();
 
             while (rs.next()) {

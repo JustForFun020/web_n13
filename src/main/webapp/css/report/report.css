@@ -194,3 +194,45 @@
 	box-shadow: 0 0 5px #000;
 	transform: scale(1.03)
 }
+
+.bangxephang__phandau {
+	display: flex;
+    justify-content: space-between;
+}
+
+.bangxephang__phanthan {
+    margin-top: 10px;
+}
+
+.bangxephang__phanthan .bangxephang__phanthan__chitiet li {
+	list-style: decimal-leading-zero;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 20px 0;
+}
+
+.bangxephang__phanthan .bangxephang__phanthan__chitiet li .thongtin__nguoidung {
+	display: flex;
+	align-items: center;
+	width: 300px;
+    justify-content: space-between;
+}
+
+.bangxephang__phanthan .bangxephang__phanthan__chitiet li .thongtin__sophut {
+	text-align: center;
+	    width: 160px;
+}
+
+.thongtin__nguoidung img {
+	width: 40px;
+    margin-left: 5px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 100%;
+}
+
+.bangxephang__phanthan__chitiet .khaongcach {
+	width: 100%;
+	height: 1px;
+	background-color: var(--text-color-8)
+}

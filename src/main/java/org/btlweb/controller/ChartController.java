@@ -16,19 +16,18 @@ public class ChartController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         ChartDAO chartDAO = new ChartDAO();
-        List<String> labels = chartDAO.getLabels();
-        List<Integer> data = chartDAO.getData();
+        int userID = (int)req.getSession().getAttribute("UserID"); 
+        List<String> labels = chartDAO.getLabels(userID);
+        List<Integer> data = chartDAO.getData(userID);
         List<String> uniqueLabels = new ArrayList<>();
         List<Integer> aggregatedData = new ArrayList<>();
         
         for (int i = 0; i < labels.size(); i++) {
             String label = labels.get(i);
-            System.out.println(label);
             int count = data.get(i);
-            System.out.println(count);
 
             if (!uniqueLabels.contains(label)) {
                 uniqueLabels.add(label);
@@ -53,8 +52,7 @@ public class ChartController extends HttpServlet {
 
         String jsonData = sb.toString();
 
-        System.out.println(sb);
-        response.setContentType("application/json");
-        response.getWriter().write(jsonData);
+        resp.setContentType("application/json");
+        resp.getWriter().write(jsonData);
     }
 }

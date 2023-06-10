@@ -4,21 +4,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>List User</title>
-	<link rel="stylesheet" href="/BTLWEB_N13/css/admin/SearchUser.css" />
-	<link rel="stylesheet" href="/BTLWEB_N13/css/styles.css" />
+<meta charset="UTF-8">
+<title>List User</title>
+<link rel="stylesheet" href="/BTLWEB_N13/css/admin/SearchUser.css" />
+<link rel="stylesheet" href="/BTLWEB_N13/css/styles.css" />
 </head>
 <body>
 	<div class="container">
 		<div class="row">
 			<div class="phandau__danhsach_nguoidung">
 				<div class="nut-them__nguoidung">
-					<a href="/BTLWEB_N13/admin/user/add" class="btn btn-primary ">Thêm mới</a>
+					<a href="/BTLWEB_N13/admin/user/add" class="btn btn-primary ">Thêm
+						mới</a>
 				</div>
 				<div class="danhsach__nguoidung__tieude">Danh Sách Người Dùng</div>
-				<form class="form-inline form__timkiem__nguoidung" action="/BTLWEB_N13/admin/user/search"
-					method="post">
+				<form class="form-inline form__timkiem__nguoidung"
+					action="/BTLWEB_N13/admin/user/search" method="post">
 					<input class="form-control" name="keyword" type="text"
 						placeholder="Tim theo ten">
 					<button type="submit" class="btn btn-danger">Tìm</button>
@@ -37,6 +38,7 @@
 					<th>Lựa chọn</th>
 				</tr>
 				<tr>
+					
 					<c:forEach items="${users}" var="user">
 						<tr>
 							<td>${user.userID}</td>
@@ -45,16 +47,19 @@
 							<td>${user.username}</td>
 							<td>${user.password}</td>
 							<td>${user.role}</td>
-							<td class="anhdaidien__nguoidnung"><img class="card-img-top" src="${user.image}" alt="anhnguoidung" /></td>
+							<td class="anhdaidien__nguoidnung"><img class="card-img-top" src="${user.image}"
+								alt="anhnguoidung" style="width: 90px; height: 90px;"></td>
 							<td>${user.lastLogin}</td>
+
 							<td class="danhsach__form">
-								<form action="/BTLWEB_N13/admin/user/update" method="post" style="margin-bottom: 4px">
+								<form action="/BTLWEB_N13/admin/user/update" method="get">
 									<input type="hidden" name="uid" value="${user.getUserID()}">
 									<button type="submit" class="btn btn-danger">Sửa</button>
-								</form>
+								</form> 
 								<form action="/BTLWEB_N13/admin/user/delete" method="get">
 									<input type="hidden" name="userID" value="${user.getUserID()}">
-									<button type="submit" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa</button>
+									<button type="submit" class="btn btn-danger"
+										onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa</button>
 								</form>
 							</td>
 						</tr>

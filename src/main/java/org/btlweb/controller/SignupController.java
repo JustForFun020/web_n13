@@ -29,38 +29,43 @@ public class SignupController extends HttpServlet {
 			req.setAttribute("msg1", "Mật khẩu và xác nhận mật khẩu không khớp");
 		}
 		if (code != null && code.equals("400")) {
-			req.setAttribute("msg1", "Tài khoản đã đăng nhập nhiều lần. Bạn có thể vào database, reset giá trị login counter về 0");
+            req.setAttribute("msg1", "Tên tài khoản đã tồn tại");
 		}
-
-
+		
+	
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/jsp/signup.jsp");
 		dispatcher.forward(req, resp);
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		UserDAO userDao = new UserDAOIMPL();
 		// doc du lieu tu form gui len
 		String fullName = req.getParameter("fullname");
 		String username = req.getParameter("taikhoan");
 		String password = req.getParameter("matkhau");
-		String email = req.getParameter("email");
 		String confirmPassword = req.getParameter("xacnhanmatkhau");
 		if (!password.equals(confirmPassword)) {
 	        // Mật khẩu và xác nhận mật khẩu không khớp
 			System.out.println("matkhaukhongkhop");
 			resp.sendRedirect(req.getContextPath() + "/register?errCode=100");
-	    } else {
-
+	    }
+		else if (userDao.checkUsernameExists(username)) {
+			System.out.println("taikhoandatontai");
+			resp.sendRedirect(req.getContextPath() + "/register?errCode=400");
+        }
+		else {
+		
 		UserLogin user = new UserLogin();
 		user.setfullName(fullName);
 		user.setUsername(username);
-		user.setemail(email);
-
+		
 		user.setPassword(password);
-
+	
+		user.setimage("NULL");
 		user.setRole("user");//fix cung mac dinh role member
 
-		UserDAO userDao = new UserDAOIMPL();
+
 		userDao.add(user);
 		/// chuyen huongS
 		// server tra ve 1 duong dan url

@@ -6,6 +6,13 @@
   transition: var(--bgr-first) 1s ease;
   position: relative;
 }
+.phandau_darknight{
+	min-height: 100vh;
+  background-color: black;
+  color: white;
+  transition: var(--bgr-first) 1s ease;
+  position: relative;
+}
 
 .phandau__thunhat {
   height: 60px;
@@ -511,3 +518,7 @@
   }
 }
 
+.nut_tua_thoigian_ketiep{
+	position: absolute;
+	right: 0;
+}

@@ -68,8 +68,8 @@
 				<!-- Header Second Time -->
 				<div class="phandau__thuhai__thoigian">
 					<h1 class="phandau__thuhai__thoigian--chu" id="time__focus">25:00</h1>
-				</div>
-
+        </div>
+          </div>
 				<!-- Header Second Button -->
 				<div class="phandau__thuhai__nut">
 					<button class="batdau__thoigian" onclick="handleCountDownTime()">START</button>

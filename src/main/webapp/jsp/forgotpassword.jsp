@@ -4,8 +4,6 @@
 <html>
 <head>
 <meta charset="ISO-8859-1" >
-
-
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,50 +14,40 @@
     />
     <link rel="shortcut icon" href="/BTLWEB_N13/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/BTLWEB_N13/css/styles.css" />
-    <link rel="stylesheet" href="/BTLWEB_N13/css/login.css" />
+     <link rel="stylesheet" href="/BTLWEB_N13/css/login.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
 </head>
 <body>
-	<main class="dangnhap__baoboc">
-	
+	<main class="dangky__baoboc">
 		<div class="tieude">
 			<img src="/BTLWEB_N13/images/icon-white2.png" alt="pomofocus-icon">
 			<h1>Pomodoro</h1>
 		</div>
-		<div class="dangnhap_chu">
-			<h3>Đăng nhập</h3>
+		<div class="dangky_chu">
+			<h3>Quên mật Khẩu</h3>
 		</div>
-		
-		<div class="dangnhap__form">
-			
-			<form class="form" role="form" action="/BTLWEB_N13/login-member" method="post">
-      		
-        		<div class="form__chu">
-          			<h1 style="color: rgb(196, 196, 196)">Đăng Nhập</h1>
-        		</div>
-        		 
+		<div class="dangky__form">
+      		<form action="/BTLWEB_N13/forgot" class="form" method="post">
+        		
         		<div style="display: flex; flex-direction: column">
+        		<p class="text-danger" style="color: rgb(196, 196, 196);">${msg1}</p>
         		
           			<div style="display: flex; flex-direction: column; margin: 15px 0">
-          			<p class="text-danger" style="color: rgb(196, 196, 196);">${msg1}</p>
-            			<label for="taikhoan">Tài Khoản</label>
-            			<input type="text" id="taikhoan" name="username"/>
+            			<label for="email">Email</label>
+            			<input type="email" id="taikhoan" name="email"/>
           			</div>
-          			<div style="display: flex; flex-direction: column; margin-bottom: 20px">
-            			<label for="matkhau">Mật Khẩu</label>
-            			<input type="password" id="matkhau" name="password"  />
-          			</div>
-          		<button class="nut__dangnhap">Đăng Nhập</button>
-          		<button class="nut__quenmatkhau">Quên Mật Khẩu</button>
+          			
+          			
+          		<button class="nut__dangky">Send</button>
         		</div>
       		</form>
     	</div>
-		<div class="dangnhap__cauhoi">
-			<span>Bạn chưa có tài khoản?</span>
+		<div class="dangky__cauhoi">
+			<span>Bạn đã có tài khoản?</span>
 		</div>
-		<div class="dangnhap__link" onclick="window.location.href='/BTLWEB_N13/jsp/signup.jsp'">
-			<h3>Đăng ký</h3>
+		<div class="dangky__link">
+			<h3>Đăng nhập</h3>
 		</div>
 	</main>
 </body>

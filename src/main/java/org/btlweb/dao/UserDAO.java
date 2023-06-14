@@ -14,8 +14,19 @@ public interface UserDAO {
 	UserLogin get(int id);// duy nhat
 
 	UserLogin getByUsername(String username);// duy nhat
+	
+	boolean checkUsernameExists(String username);
+
+	boolean checkEmail(String email);
+
+	void updatePassword(String email, String newPassword);
+	
+	boolean checkUsername(String email, String password) ;
 
 	List<UserLogin> search(String name);
 
 	List<UserLogin> getAllUsers();
+
+	int dayLogin(int id);
+	int hourFocus(int id);
 }

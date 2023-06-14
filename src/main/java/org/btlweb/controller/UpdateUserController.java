@@ -16,39 +16,51 @@ import org.btlweb.model.UserLogin;
 @WebServlet("/admin/user/update")
 public class UpdateUserController extends HttpServlet {
 
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private UserDAO userDao = new UserDAOIMPL();
+    private UserDAO userDao = new UserDAOIMPL();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String uid = req.getParameter("uid");
 
-        UserLogin user = userDao.get(Integer.parseInt(uid));
-        req.setAttribute("user", user);
+        if (uid != null && !uid.isEmpty()) {
+            int userId = Integer.parseInt(uid);
+            UserLogin user = userDao.get(userId);
+
+            if (user != null) {
+                req.setAttribute("user", user);
+            }
+        }
+
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("/jsp/admin/user/updateUser.jsp");
         requestDispatcher.forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String id = req.getParameter("UserID");
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
-        String role = req.getParameter("role");
-        String image = req.getParameter("image");
+    	String idString = req.getParameter("userID");
+		int id = Integer.parseInt(idString);
+		String name = req.getParameter("fullName");
+		String email = req.getParameter("email");
+		String username = req.getParameter("username");
+		String password = req.getParameter("password");
 
-        UserLogin user = new UserLogin();
-        user.setId(Integer.parseInt(id));
-        user.setUsername(username);
-        user.setPassword(password);
-        user.setRole(role);
-        user.setimage(image);
+		String role = req.getParameter("role");
+		String image = req.getParameter("image");
 
-        userDao.update(user);
+   
 
-        resp.sendRedirect(req.getContextPath() + "/admin/user/search");
+            UserLogin user = userDao.get(id);
+
+            if (user != null) {
+                user.setUsername(username);
+                user.setPassword(password);
+                user.setRole(role);
+                user.setimage(image);
+
+                userDao.update(user);
+            }
+        
+
+        resp.sendRedirect(req.getContextPath() + "/admin/user/list");
     }
 }

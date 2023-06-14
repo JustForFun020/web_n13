@@ -83,12 +83,11 @@
     border-radius: 20px;
     padding: 18px;
     min-width: 120px;
-    background-color: var(--border-color);
+    background-color: #F8C4B4;
 }
 
 .sogio__taptrung--form p, .dangnhap__lientiep--form p {
-    color: #FFD3B0;
-    font-weight: bold;
+    color: #FFF;
 }
 
 .sogio__taptrung--form img, .dangnhap__lientiep--form img {
@@ -111,6 +110,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .tonghop__hoatdong__title p, .tonghop__todolist__title p, .baocao__noidung__title p, .baocao__bangxephang__title p {
@@ -173,8 +173,66 @@
     margin: 20px 0;
 }
 
+.baocao__noidung__chitiet > div {
+	margin-bottom: 5px
+}
+
 .baocao__noidung__chitiet p {
     font-size: 20px;
     color: var(--text-color-4);
     font-weight: bold;
+}
+
+.ten__todolist, .trangthai__todolist {
+	font-size: 18px;
+	font-weight: unset;
+	color: var(--text-color-6);
+	margin-bottom: 5px;
+}
+
+.danhsach__chitiet__todo:hover {
+	box-shadow: 0 0 5px #000;
+	transform: scale(1.03)
+}
+
+.bangxephang__phandau {
+	display: flex;
+    justify-content: space-between;
+}
+
+.bangxephang__phanthan {
+    margin-top: 10px;
+}
+
+.bangxephang__phanthan .bangxephang__phanthan__chitiet li {
+	list-style: decimal-leading-zero;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 20px 0;
+}
+
+.bangxephang__phanthan .bangxephang__phanthan__chitiet li .thongtin__nguoidung {
+	display: flex;
+	align-items: center;
+	width: 300px;
+    justify-content: space-between;
+}
+
+.bangxephang__phanthan .bangxephang__phanthan__chitiet li .thongtin__sophut {
+	text-align: center;
+	    width: 160px;
+}
+
+.thongtin__nguoidung img {
+	width: 40px;
+    margin-left: 5px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 100%;
+}
+
+.bangxephang__phanthan__chitiet .khaongcach {
+	width: 100%;
+	height: 1px;
+	background-color: var(--text-color-8)
 }

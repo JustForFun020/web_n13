@@ -31,19 +31,19 @@ public class ActionTodoListController extends HttpServlet {
 			 switch (action) {
 			 	case "done-all-task": 
 			 		actionTodoListDAO.doneAllTodoList();
-			 		resp.sendRedirect(req.getContextPath() + "/jsp/index.jsp");
+			 		resp.sendRedirect(req.getContextPath() + "/jsp/user/index.jsp");
 			 		break;
 			 	case "clear-all-task":
 			 		actionTodoListDAO.clearAllTodoList();
-			 		resp.sendRedirect(req.getContextPath() + "/jsp/index.jsp");
+			 		resp.sendRedirect(req.getContextPath() + "/jsp/user/index.jsp");
 			 		break;
 			 	case "clear-finished-task":
 			 		actionTodoListDAO.clearFinishedTodoList();
-			 		resp.sendRedirect(req.getContextPath() + "/jsp/index.jsp");
+			 		resp.sendRedirect(req.getContextPath() + "/jsp/user/index.jsp");
 			 		break;
 			 	case "clear-inprocess-task":
 			 		actionTodoListDAO.clearInProcessTodoList();
-			 		resp.sendRedirect(req.getContextPath() + "/jsp/index.jsp");
+			 		resp.sendRedirect(req.getContextPath() + "/jsp/user/index.jsp");
 			 		break;
 			 	default:
 			 		throw new IllegalArgumentException("Unexpected value: " + action);
